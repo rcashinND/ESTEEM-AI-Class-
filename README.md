@@ -81,9 +81,8 @@ The source files sit at the project root. No credentials are required, and local
 
 ## AI-use record
 
-I used Replit and ChatGPT to help develop the prototype. ChatGPT helped compare the build with the assignment and my problem framing, narrow the workflow, prepare example responses, revise the interface, write checks and draft the README. I tested the three user-facing cases in Replit Preview.
+I used Replit and ChatGPT to help develop the prototype. ChatGPT helped me to adjust the wording of my assignment and include technical requirements. I tested the three user-facing cases in Replit Preview.
 
-An important revision was removing public job publication from this slice. It added a second user journey before I had tested whether the structured enquiry was useful. I also kept the original message visible and ensured that changing the input removes the previous result, so the tradesperson is not reviewing an outdated summary.
 
 ## Submission note
 
