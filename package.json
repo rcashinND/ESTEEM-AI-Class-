@@ -1,6 +1,0 @@
-{
-  "name": "trawd", "version": "1.0.0", "private": true, "type": "module",
-  "description": "Trawd first working slice: customer enquiry to structured job summary",
-  "scripts": {"start": "node server.mjs", "dev": "node server.mjs", "test": "node --test tests/analysis.test.mjs"},
-  "engines": {"node": ">=20"}
-}
