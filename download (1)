@@ -1,0 +1,8 @@
+run = "npm start"
+modules = ["nodejs-24"]
+[deployment]
+run = ["node", "server.mjs"]
+deploymentTarget = "autoscale"
+[[ports]]
+localPort = 3000
+externalPort = 80
