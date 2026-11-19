@@ -1,0 +1,946 @@
+
+> trawd@1.0.0 test
+> node --test tests/*.test.mjs
+
+✔ Typical enquiry preserves supplied facts without inferring urgency (4.970869ms)
+✔ Ambiguous enquiry retains multiple possible trades and unknown cause (0.315008ms)
+✔ Empty, short and excessive messages rejected (0.211976ms)
+✔ Vague enquiry does not invent a bathroom renovation (0.102557ms)
+✔ Changed location is extracted rather than inheriting South Bend (1.972032ms)
+✔ Adversarial text cannot inherit a prepared answer (1.31526ms)
+✔ Changed weekday is accurate in fields and summary (0.269235ms)
+✔ Punctuation and alternate faucet wording stay bounded (0.164472ms)
+✔ Electrical symptoms with damp retain caution without diagnosis (0.443593ms)
+✔ Maintenance is tentative and unrelated input is manual (0.296361ms)
+✔ Negation and multiple schedules are never silently resolved (0.173271ms)
+✔ Repeat analysis returns independent details and unknowns (0.118044ms)
+✖ Materials never reverse negative/uncertain wording: I haven't bought the replacement tap. (5.452435ms)
+✖ Materials never reverse negative/uncertain wording: I haven’t bought the replacement tap. (0.535433ms)
+✖ Materials never reverse negative/uncertain wording: I have not bought the replacement tap. (0.511159ms)
+✖ Materials never reverse negative/uncertain wording: I have not yet bought the replacement tap. (9.277522ms)
+✖ Materials never reverse negative/uncertain wording: I have not purchased the replacement tap. (0.187654ms)
+✖ Materials never reverse negative/uncertain wording: Not bought the replacement tap yet. (0.883892ms)
+✖ Materials never reverse negative/uncertain wording: I don't have the replacement tap. (0.153291ms)
+✖ Materials never reverse negative/uncertain wording: I do not have a replacement tap. (0.137367ms)
+✖ Materials never reverse negative/uncertain wording: I have not yet purchased the replacement tap. (0.300116ms)
+✖ Materials never reverse negative/uncertain wording: Replacement tap not yet purchased. (0.191446ms)
+✖ Materials never reverse negative/uncertain wording: We haven't purchased a replacement faucet. (0.415334ms)
+✖ Materials never reverse negative/uncertain wording: I never bought the replacement tap. (0.425227ms)
+✖ Materials never reverse negative/uncertain wording: I am without a replacement tap. (0.115113ms)
+✖ Materials never reverse negative/uncertain wording: I have no replacement tap available. (0.424648ms)
+✖ Materials never reverse negative/uncertain wording: The replacement tap is unavailable. (0.616232ms)
+✖ Materials never reverse negative/uncertain wording: I can't confirm whether I bought the replacement tap. (0.105769ms)
+✖ Contrasting, qualified or attributed materials remain uncertain: I bought the replacement tap but I don't have it. (0.111928ms)
+✖ Contrasting, qualified or attributed materials remain uncertain: I haven't bought the tap, but I have bought the replacement tap. (0.068352ms)
+✖ Contrasting, qualified or attributed materials remain uncertain: I have bought the replacement tap. Actually, I have not bought it. (0.055331ms)
+✖ Contrasting, qualified or attributed materials remain uncertain: I have bought the replacement tap. It is not available. (0.088163ms)
+✖ Contrasting, qualified or attributed materials remain uncertain: I have bought the replacement tap. I returned it. (0.062405ms)
+✖ Contrasting, qualified or attributed materials remain uncertain: I have bought the replacement tap. It has not arrived. (0.05511ms)
+✖ Contrasting, qualified or attributed materials remain uncertain: I may have bought the replacement tap. (0.082808ms)
+✖ Contrasting, qualified or attributed materials remain uncertain: If I have bought the replacement tap, can you fit it? (1.996974ms)
+✖ Contrasting, qualified or attributed materials remain uncertain: Did I buy the replacement tap? (0.137483ms)
+✖ Contrasting, qualified or attributed materials remain uncertain: I have bought the replacement tap for another property. (0.073633ms)
+✖ Contrasting, qualified or attributed materials remain uncertain: The plumber said "I have bought the replacement tap". (0.060122ms)
+✖ Contrasting, qualified or attributed materials remain uncertain: I have bought the replacement tap? I am unsure. (0.110833ms)
+✖ Contrasting, qualified or attributed materials remain uncertain: I have bought the replacement tap, or perhaps I only ordered it. (0.080011ms)
+✖ Unqualified first-person purchase is retained: I have bought the replacement tap. (0.115539ms)
+✖ Unqualified first-person purchase is retained: I bought a replacement faucet. (0.135179ms)
+✖ Unqualified first-person purchase is retained: We have purchased the replacement tap. (0.067774ms)
+✖ Unqualified first-person purchase is retained: I’ve already bought the replacement tap. (0.138569ms)
+✖ Exact audited negative purchase never becomes purchased (0.121512ms)
+✖ Overlapping trades accumulate with electrical caution: Please repair the fence and assess a faulty socket in Dublin tomorrow. (0.326793ms)
+✖ Overlapping trades accumulate with electrical caution: Please assess a faulty socket and repair the fence in Dublin tomorrow. (0.181746ms)
+✖ Overlapping trades accumulate with electrical caution: Please replace the tap and repair the fence and assess a faulty socket in Dublin tomorrow. (0.082089ms)
+✖ Overlapping trades accumulate with electrical caution: Please fix the door. The outlet is sparking in Dublin tomorrow. (0.072129ms)
+✖ Independent plumbing and maintenance requests retain both suggestions (1.452784ms)
+✖ Negated work is not classified from keywords (1.013335ms)
+✔ No plumbing is inferred solely from buying a tap during a fence repair (0.393875ms)
+✖ Wednesday preserves the specific plumbing follow-up questions (0.429812ms)
+✖ Explicit variation retains Dublin and Friday (0.496972ms)
+✖ Explicit variation retains South Bend and Monday (0.221177ms)
+✖ Explicit variation retains New York and Thursday (0.115467ms)
+✔ Conflicting dates and locations are not silently selected (0.154783ms)
+✖ Unsupported vague request invents no trade or purchased materials (0.20626ms)
+✔ Invalid input types and whitespace produce useful validation (0.455488ms)
+✖ Electrical caution survives uncertain purchase wording (0.22631ms)
+✔ HTTP assets and private-path protection from an ephemeral server (137.975912ms)
+ℹ tests 62
+ℹ suites 0
+ℹ pass 16
+ℹ fail 46
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 481.674976
+
+✖ failing tests:
+
+test at tests/release-regression.test.mjs:27:3
+✖ Materials never reverse negative/uncertain wording: I haven't bought the replacement tap. (5.452435ms)
+  AssertionError [ERR_ASSERTION]: The "string" argument must be of type string. Received type undefined (undefined)
+      at TestContext.<anonymous> (file:///home/runner/workspace/tests/release-regression.test.mjs:30:12)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.start (node:internal/test_runner/test:1262:17)
+      at startSubtestAfterBootstrap (node:internal/test_runner/harness:387:17) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: /not confirmed|uncertain/i,
+    operator: 'match',
+    diff: 'simple'
+  }
+
+test at tests/release-regression.test.mjs:27:3
+✖ Materials never reverse negative/uncertain wording: I haven’t bought the replacement tap. (0.535433ms)
+  AssertionError [ERR_ASSERTION]: The "string" argument must be of type string. Received type undefined (undefined)
+      at TestContext.<anonymous> (file:///home/runner/workspace/tests/release-regression.test.mjs:30:12)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: /not confirmed|uncertain/i,
+    operator: 'match',
+    diff: 'simple'
+  }
+
+test at tests/release-regression.test.mjs:27:3
+✖ Materials never reverse negative/uncertain wording: I have not bought the replacement tap. (0.511159ms)
+  AssertionError [ERR_ASSERTION]: The "string" argument must be of type string. Received type undefined (undefined)
+      at TestContext.<anonymous> (file:///home/runner/workspace/tests/release-regression.test.mjs:30:12)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: /not confirmed|uncertain/i,
+    operator: 'match',
+    diff: 'simple'
+  }
+
+test at tests/release-regression.test.mjs:27:3
+✖ Materials never reverse negative/uncertain wording: I have not yet bought the replacement tap. (9.277522ms)
+  AssertionError [ERR_ASSERTION]: The "string" argument must be of type string. Received type undefined (undefined)
+      at TestContext.<anonymous> (file:///home/runner/workspace/tests/release-regression.test.mjs:30:12)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: /not confirmed|uncertain/i,
+    operator: 'match',
+    diff: 'simple'
+  }
+
+test at tests/release-regression.test.mjs:27:3
+✖ Materials never reverse negative/uncertain wording: I have not purchased the replacement tap. (0.187654ms)
+  AssertionError [ERR_ASSERTION]: The "string" argument must be of type string. Received type undefined (undefined)
+      at TestContext.<anonymous> (file:///home/runner/workspace/tests/release-regression.test.mjs:30:12)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: /not confirmed|uncertain/i,
+    operator: 'match',
+    diff: 'simple'
+  }
+
+test at tests/release-regression.test.mjs:27:3
+✖ Materials never reverse negative/uncertain wording: Not bought the replacement tap yet. (0.883892ms)
+  AssertionError [ERR_ASSERTION]: The "string" argument must be of type string. Received type undefined (undefined)
+      at TestContext.<anonymous> (file:///home/runner/workspace/tests/release-regression.test.mjs:30:12)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: /not confirmed|uncertain/i,
+    operator: 'match',
+    diff: 'simple'
+  }
+
+test at tests/release-regression.test.mjs:27:3
+✖ Materials never reverse negative/uncertain wording: I don't have the replacement tap. (0.153291ms)
+  AssertionError [ERR_ASSERTION]: The "string" argument must be of type string. Received type undefined (undefined)
+      at TestContext.<anonymous> (file:///home/runner/workspace/tests/release-regression.test.mjs:30:12)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: /not confirmed|uncertain/i,
+    operator: 'match',
+    diff: 'simple'
+  }
+
+test at tests/release-regression.test.mjs:27:3
+✖ Materials never reverse negative/uncertain wording: I do not have a replacement tap. (0.137367ms)
+  AssertionError [ERR_ASSERTION]: The "string" argument must be of type string. Received type undefined (undefined)
+      at TestContext.<anonymous> (file:///home/runner/workspace/tests/release-regression.test.mjs:30:12)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: /not confirmed|uncertain/i,
+    operator: 'match',
+    diff: 'simple'
+  }
+
+test at tests/release-regression.test.mjs:27:3
+✖ Materials never reverse negative/uncertain wording: I have not yet purchased the replacement tap. (0.300116ms)
+  AssertionError [ERR_ASSERTION]: The "string" argument must be of type string. Received type undefined (undefined)
+      at TestContext.<anonymous> (file:///home/runner/workspace/tests/release-regression.test.mjs:30:12)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: /not confirmed|uncertain/i,
+    operator: 'match',
+    diff: 'simple'
+  }
+
+test at tests/release-regression.test.mjs:27:3
+✖ Materials never reverse negative/uncertain wording: Replacement tap not yet purchased. (0.191446ms)
+  AssertionError [ERR_ASSERTION]: The "string" argument must be of type string. Received type undefined (undefined)
+      at TestContext.<anonymous> (file:///home/runner/workspace/tests/release-regression.test.mjs:30:12)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: /not confirmed|uncertain/i,
+    operator: 'match',
+    diff: 'simple'
+  }
+
+test at tests/release-regression.test.mjs:27:3
+✖ Materials never reverse negative/uncertain wording: We haven't purchased a replacement faucet. (0.415334ms)
+  AssertionError [ERR_ASSERTION]: The "string" argument must be of type string. Received type undefined (undefined)
+      at TestContext.<anonymous> (file:///home/runner/workspace/tests/release-regression.test.mjs:30:12)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: /not confirmed|uncertain/i,
+    operator: 'match',
+    diff: 'simple'
+  }
+
+test at tests/release-regression.test.mjs:27:3
+✖ Materials never reverse negative/uncertain wording: I never bought the replacement tap. (0.425227ms)
+  AssertionError [ERR_ASSERTION]: The "string" argument must be of type string. Received type undefined (undefined)
+      at TestContext.<anonymous> (file:///home/runner/workspace/tests/release-regression.test.mjs:30:12)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: /not confirmed|uncertain/i,
+    operator: 'match',
+    diff: 'simple'
+  }
+
+test at tests/release-regression.test.mjs:27:3
+✖ Materials never reverse negative/uncertain wording: I am without a replacement tap. (0.115113ms)
+  AssertionError [ERR_ASSERTION]: The "string" argument must be of type string. Received type undefined (undefined)
+      at TestContext.<anonymous> (file:///home/runner/workspace/tests/release-regression.test.mjs:30:12)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: /not confirmed|uncertain/i,
+    operator: 'match',
+    diff: 'simple'
+  }
+
+test at tests/release-regression.test.mjs:27:3
+✖ Materials never reverse negative/uncertain wording: I have no replacement tap available. (0.424648ms)
+  AssertionError [ERR_ASSERTION]: The "string" argument must be of type string. Received type undefined (undefined)
+      at TestContext.<anonymous> (file:///home/runner/workspace/tests/release-regression.test.mjs:30:12)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: /not confirmed|uncertain/i,
+    operator: 'match',
+    diff: 'simple'
+  }
+
+test at tests/release-regression.test.mjs:27:3
+✖ Materials never reverse negative/uncertain wording: The replacement tap is unavailable. (0.616232ms)
+  AssertionError [ERR_ASSERTION]: The "string" argument must be of type string. Received type undefined (undefined)
+      at TestContext.<anonymous> (file:///home/runner/workspace/tests/release-regression.test.mjs:30:12)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: /not confirmed|uncertain/i,
+    operator: 'match',
+    diff: 'simple'
+  }
+
+test at tests/release-regression.test.mjs:27:3
+✖ Materials never reverse negative/uncertain wording: I can't confirm whether I bought the replacement tap. (0.105769ms)
+  AssertionError [ERR_ASSERTION]: The "string" argument must be of type string. Received type undefined (undefined)
+      at TestContext.<anonymous> (file:///home/runner/workspace/tests/release-regression.test.mjs:30:12)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: /not confirmed|uncertain/i,
+    operator: 'match',
+    diff: 'simple'
+  }
+
+test at tests/release-regression.test.mjs:53:3
+✖ Contrasting, qualified or attributed materials remain uncertain: I bought the replacement tap but I don't have it. (0.111928ms)
+  AssertionError [ERR_ASSERTION]: The "string" argument must be of type string. Received type undefined (undefined)
+      at TestContext.<anonymous> (file:///home/runner/workspace/tests/release-regression.test.mjs:55:12)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: /not confirmed|uncertain/i,
+    operator: 'match',
+    diff: 'simple'
+  }
+
+test at tests/release-regression.test.mjs:53:3
+✖ Contrasting, qualified or attributed materials remain uncertain: I haven't bought the tap, but I have bought the replacement tap. (0.068352ms)
+  AssertionError [ERR_ASSERTION]: The "string" argument must be of type string. Received type undefined (undefined)
+      at TestContext.<anonymous> (file:///home/runner/workspace/tests/release-regression.test.mjs:55:12)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: /not confirmed|uncertain/i,
+    operator: 'match',
+    diff: 'simple'
+  }
+
+test at tests/release-regression.test.mjs:53:3
+✖ Contrasting, qualified or attributed materials remain uncertain: I have bought the replacement tap. Actually, I have not bought it. (0.055331ms)
+  AssertionError [ERR_ASSERTION]: The "string" argument must be of type string. Received type undefined (undefined)
+      at TestContext.<anonymous> (file:///home/runner/workspace/tests/release-regression.test.mjs:55:12)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: /not confirmed|uncertain/i,
+    operator: 'match',
+    diff: 'simple'
+  }
+
+test at tests/release-regression.test.mjs:53:3
+✖ Contrasting, qualified or attributed materials remain uncertain: I have bought the replacement tap. It is not available. (0.088163ms)
+  AssertionError [ERR_ASSERTION]: The "string" argument must be of type string. Received type undefined (undefined)
+      at TestContext.<anonymous> (file:///home/runner/workspace/tests/release-regression.test.mjs:55:12)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: /not confirmed|uncertain/i,
+    operator: 'match',
+    diff: 'simple'
+  }
+
+test at tests/release-regression.test.mjs:53:3
+✖ Contrasting, qualified or attributed materials remain uncertain: I have bought the replacement tap. I returned it. (0.062405ms)
+  AssertionError [ERR_ASSERTION]: The "string" argument must be of type string. Received type undefined (undefined)
+      at TestContext.<anonymous> (file:///home/runner/workspace/tests/release-regression.test.mjs:55:12)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: /not confirmed|uncertain/i,
+    operator: 'match',
+    diff: 'simple'
+  }
+
+test at tests/release-regression.test.mjs:53:3
+✖ Contrasting, qualified or attributed materials remain uncertain: I have bought the replacement tap. It has not arrived. (0.05511ms)
+  AssertionError [ERR_ASSERTION]: The "string" argument must be of type string. Received type undefined (undefined)
+      at TestContext.<anonymous> (file:///home/runner/workspace/tests/release-regression.test.mjs:55:12)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: /not confirmed|uncertain/i,
+    operator: 'match',
+    diff: 'simple'
+  }
+
+test at tests/release-regression.test.mjs:53:3
+✖ Contrasting, qualified or attributed materials remain uncertain: I may have bought the replacement tap. (0.082808ms)
+  AssertionError [ERR_ASSERTION]: The "string" argument must be of type string. Received type undefined (undefined)
+      at TestContext.<anonymous> (file:///home/runner/workspace/tests/release-regression.test.mjs:55:12)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: /not confirmed|uncertain/i,
+    operator: 'match',
+    diff: 'simple'
+  }
+
+test at tests/release-regression.test.mjs:53:3
+✖ Contrasting, qualified or attributed materials remain uncertain: If I have bought the replacement tap, can you fit it? (1.996974ms)
+  AssertionError [ERR_ASSERTION]: The "string" argument must be of type string. Received type undefined (undefined)
+      at TestContext.<anonymous> (file:///home/runner/workspace/tests/release-regression.test.mjs:55:12)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: /not confirmed|uncertain/i,
+    operator: 'match',
+    diff: 'simple'
+  }
+
+test at tests/release-regression.test.mjs:53:3
+✖ Contrasting, qualified or attributed materials remain uncertain: Did I buy the replacement tap? (0.137483ms)
+  AssertionError [ERR_ASSERTION]: The "string" argument must be of type string. Received type undefined (undefined)
+      at TestContext.<anonymous> (file:///home/runner/workspace/tests/release-regression.test.mjs:55:12)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: /not confirmed|uncertain/i,
+    operator: 'match',
+    diff: 'simple'
+  }
+
+test at tests/release-regression.test.mjs:53:3
+✖ Contrasting, qualified or attributed materials remain uncertain: I have bought the replacement tap for another property. (0.073633ms)
+  AssertionError [ERR_ASSERTION]: The "string" argument must be of type string. Received type undefined (undefined)
+      at TestContext.<anonymous> (file:///home/runner/workspace/tests/release-regression.test.mjs:55:12)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: /not confirmed|uncertain/i,
+    operator: 'match',
+    diff: 'simple'
+  }
+
+test at tests/release-regression.test.mjs:53:3
+✖ Contrasting, qualified or attributed materials remain uncertain: The plumber said "I have bought the replacement tap". (0.060122ms)
+  AssertionError [ERR_ASSERTION]: The "string" argument must be of type string. Received type undefined (undefined)
+      at TestContext.<anonymous> (file:///home/runner/workspace/tests/release-regression.test.mjs:55:12)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: /not confirmed|uncertain/i,
+    operator: 'match',
+    diff: 'simple'
+  }
+
+test at tests/release-regression.test.mjs:53:3
+✖ Contrasting, qualified or attributed materials remain uncertain: I have bought the replacement tap? I am unsure. (0.110833ms)
+  AssertionError [ERR_ASSERTION]: The "string" argument must be of type string. Received type undefined (undefined)
+      at TestContext.<anonymous> (file:///home/runner/workspace/tests/release-regression.test.mjs:55:12)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: /not confirmed|uncertain/i,
+    operator: 'match',
+    diff: 'simple'
+  }
+
+test at tests/release-regression.test.mjs:53:3
+✖ Contrasting, qualified or attributed materials remain uncertain: I have bought the replacement tap, or perhaps I only ordered it. (0.080011ms)
+  AssertionError [ERR_ASSERTION]: The "string" argument must be of type string. Received type undefined (undefined)
+      at TestContext.<anonymous> (file:///home/runner/workspace/tests/release-regression.test.mjs:55:12)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: /not confirmed|uncertain/i,
+    operator: 'match',
+    diff: 'simple'
+  }
+
+test at tests/release-regression.test.mjs:66:3
+✖ Unqualified first-person purchase is retained: I have bought the replacement tap. (0.115539ms)
+  AssertionError [ERR_ASSERTION]: The "string" argument must be of type string. Received type undefined (undefined)
+      at TestContext.<anonymous> (file:///home/runner/workspace/tests/release-regression.test.mjs:68:12)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: /customer states.*(?:bought|purchased)/i,
+    operator: 'match',
+    diff: 'simple'
+  }
+
+test at tests/release-regression.test.mjs:66:3
+✖ Unqualified first-person purchase is retained: I bought a replacement faucet. (0.135179ms)
+  AssertionError [ERR_ASSERTION]: The "string" argument must be of type string. Received type undefined (undefined)
+      at TestContext.<anonymous> (file:///home/runner/workspace/tests/release-regression.test.mjs:68:12)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: /customer states.*(?:bought|purchased)/i,
+    operator: 'match',
+    diff: 'simple'
+  }
+
+test at tests/release-regression.test.mjs:66:3
+✖ Unqualified first-person purchase is retained: We have purchased the replacement tap. (0.067774ms)
+  AssertionError [ERR_ASSERTION]: The "string" argument must be of type string. Received type undefined (undefined)
+      at TestContext.<anonymous> (file:///home/runner/workspace/tests/release-regression.test.mjs:68:12)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: /customer states.*(?:bought|purchased)/i,
+    operator: 'match',
+    diff: 'simple'
+  }
+
+test at tests/release-regression.test.mjs:66:3
+✖ Unqualified first-person purchase is retained: I’ve already bought the replacement tap. (0.138569ms)
+  AssertionError [ERR_ASSERTION]: The "string" argument must be of type string. Received type undefined (undefined)
+      at TestContext.<anonymous> (file:///home/runner/workspace/tests/release-regression.test.mjs:68:12)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: /customer states.*(?:bought|purchased)/i,
+    operator: 'match',
+    diff: 'simple'
+  }
+
+test at tests/release-regression.test.mjs:74:1
+✖ Exact audited negative purchase never becomes purchased (0.121512ms)
+  AssertionError [ERR_ASSERTION]: The "string" argument must be of type string. Received type undefined (undefined)
+      at TestContext.<anonymous> (file:///home/runner/workspace/tests/release-regression.test.mjs:77:10)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: /not confirmed/i,
+    operator: 'match',
+    diff: 'simple'
+  }
+
+test at tests/release-regression.test.mjs:89:3
+✖ Overlapping trades accumulate with electrical caution: Please repair the fence and assess a faulty socket in Dublin tomorrow. (0.326793ms)
+  AssertionError [ERR_ASSERTION]: The input did not match the regular expression /electrician/i. Input:
+  
+  'Uncertain — carpenter or general maintenance'
+  
+      at TestContext.<anonymous> (file:///home/runner/workspace/tests/release-regression.test.mjs:92:12)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 'Uncertain — carpenter or general maintenance',
+    expected: /electrician/i,
+    operator: 'match',
+    diff: 'simple'
+  }
+
+test at tests/release-regression.test.mjs:89:3
+✖ Overlapping trades accumulate with electrical caution: Please assess a faulty socket and repair the fence in Dublin tomorrow. (0.181746ms)
+  AssertionError [ERR_ASSERTION]: The input did not match the regular expression /electrician/i. Input:
+  
+  'Uncertain — carpenter or general maintenance'
+  
+      at TestContext.<anonymous> (file:///home/runner/workspace/tests/release-regression.test.mjs:92:12)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 'Uncertain — carpenter or general maintenance',
+    expected: /electrician/i,
+    operator: 'match',
+    diff: 'simple'
+  }
+
+test at tests/release-regression.test.mjs:89:3
+✖ Overlapping trades accumulate with electrical caution: Please replace the tap and repair the fence and assess a faulty socket in Dublin tomorrow. (0.082089ms)
+  AssertionError [ERR_ASSERTION]: The input did not match the regular expression /electrician/i. Input:
+  
+  'Uncertain — carpenter or general maintenance'
+  
+      at TestContext.<anonymous> (file:///home/runner/workspace/tests/release-regression.test.mjs:92:12)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 'Uncertain — carpenter or general maintenance',
+    expected: /electrician/i,
+    operator: 'match',
+    diff: 'simple'
+  }
+
+test at tests/release-regression.test.mjs:89:3
+✖ Overlapping trades accumulate with electrical caution: Please fix the door. The outlet is sparking in Dublin tomorrow. (0.072129ms)
+  AssertionError [ERR_ASSERTION]: The input did not match the regular expression /electrician/i. Input:
+  
+  'Uncertain — carpenter or general maintenance'
+  
+      at TestContext.<anonymous> (file:///home/runner/workspace/tests/release-regression.test.mjs:92:12)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 'Uncertain — carpenter or general maintenance',
+    expected: /electrician/i,
+    operator: 'match',
+    diff: 'simple'
+  }
+
+test at tests/release-regression.test.mjs:104:1
+✖ Independent plumbing and maintenance requests retain both suggestions (1.452784ms)
+  AssertionError [ERR_ASSERTION]: The input did not match the regular expression /plumber/i. Input:
+  
+  'Uncertain — carpenter or general maintenance'
+  
+      at TestContext.<anonymous> (file:///home/runner/workspace/tests/release-regression.test.mjs:106:10)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 'Uncertain — carpenter or general maintenance',
+    expected: /plumber/i,
+    operator: 'match',
+    diff: 'simple'
+  }
+
+test at tests/release-regression.test.mjs:112:1
+✖ Negated work is not classified from keywords (1.013335ms)
+  AssertionError [ERR_ASSERTION]: The input did not match the regular expression /plumber/i. Input:
+  
+  'Not provided'
+  
+      at TestContext.<anonymous> (file:///home/runner/workspace/tests/release-regression.test.mjs:115:10)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 'Not provided',
+    expected: /plumber/i,
+    operator: 'match',
+    diff: 'simple'
+  }
+
+test at tests/release-regression.test.mjs:124:1
+✖ Wednesday preserves the specific plumbing follow-up questions (0.429812ms)
+  AssertionError [ERR_ASSERTION]: The input did not match the regular expression /time/i. Input:
+  
+  'Confirm the work, quantity, compatibility, access and severity directly with the customer.'
+  
+      at TestContext.<anonymous> (file:///home/runner/workspace/tests/release-regression.test.mjs:130:10)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 'Confirm the work, quantity, compatibility, access and severity directly with the customer.',
+    expected: /time/i,
+    operator: 'match',
+    diff: 'simple'
+  }
+
+test at tests/release-regression.test.mjs:134:3
+✖ Explicit variation retains Dublin and Friday (0.496972ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+  
+  + undefined
+  - 'Not provided'
+  
+      at TestContext.<anonymous> (file:///home/runner/workspace/tests/release-regression.test.mjs:138:12)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: 'Not provided',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/release-regression.test.mjs:134:3
+✖ Explicit variation retains South Bend and Monday (0.221177ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+  
+  + undefined
+  - 'Not provided'
+  
+      at TestContext.<anonymous> (file:///home/runner/workspace/tests/release-regression.test.mjs:138:12)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: 'Not provided',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/release-regression.test.mjs:134:3
+✖ Explicit variation retains New York and Thursday (0.115467ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+  
+  + undefined
+  - 'Not provided'
+  
+      at TestContext.<anonymous> (file:///home/runner/workspace/tests/release-regression.test.mjs:138:12)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: 'Not provided',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/release-regression.test.mjs:149:1
+✖ Unsupported vague request invents no trade or purchased materials (0.20626ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+  
+  + undefined
+  - 'Not provided'
+  
+      at TestContext.<anonymous> (file:///home/runner/workspace/tests/release-regression.test.mjs:153:10)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: 'Not provided',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/release-regression.test.mjs:162:1
+✖ Electrical caution survives uncertain purchase wording (0.22631ms)
+  AssertionError [ERR_ASSERTION]: The input was expected to not match the regular expression /replacement tap already purchased|customer (?:states they have|has) bought|materials purchased/i. Input:
+  
+  'Assessment of reported electrical symptoms. Location phrase: Dublin. Timing: tomorrow (customer’s wording). Replacement tap already purchased. Review the original message before arranging work. Not provided — assessment required The original message describes symptoms or repair work; cause and extent need assessment.'
+  
+      at TestContext.<anonymous> (file:///home/runner/workspace/tests/release-regression.test.mjs:166:10)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 'Assessment of reported electrical symptoms. Location phrase: Dublin. Timing: tomorrow (customer’s wording). Replacement tap already purchased. Review the original message before arranging work. Not provided — assessment required The original message describes symptoms or repair work; cause and extent need assessment.',
+    expected: /replacement tap already purchased|customer (?:states they have|has) bought|materials purchased/i,
+    operator: 'doesNotMatch',
+    diff: 'simple'
+  }

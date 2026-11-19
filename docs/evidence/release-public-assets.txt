@@ -1,0 +1,14 @@
+Checked UTC: 2026-11-19T17:51:34.802Z
+Comparison is against the NEW local review-safeguards build. A mismatch is not a startup failure.
+HOST https://trade-lead-ai.replit.app
+{"path":"/","status":200,"matchesLocal":false,"sha256":"ae826bc8fdc834887fd4bf52580c5083040e22691d2da24392e150d1431f8d59","localSha256":"396bf31970168078aa280827c570c7916e64495fe89166e76a50242157a517b9","revision":true,"simulation":true,"latestBuild":false}
+{"path":"/app.js","status":200,"matchesLocal":false,"sha256":"3d7021fe669b4a37356f2bbc640e3a8ba30307e8521e2280b18762ca6125e99d","localSha256":"1d56492d322d5ba18efd4a18237198b16001e8e128e55e5027e22a219fc531fb"}
+{"path":"/analysis.mjs","status":200,"matchesLocal":false,"sha256":"4680205c6210e4d4b660a0a162c5c7d41d2fbf0eaef4315016e4b101d65607c1","localSha256":"0031511596fed92212729241679e1acde30af261ed7841c7b97a9740d0dcf7b7"}
+{"path":"/rules.mjs","status":200,"matchesLocal":false,"sha256":"a7dd82f90bd4820ba559f70251b4782afb32a3da6c7b716042b227ec3a6f63a6","localSha256":"a05ca1e8eec7dd98a8d8e43b70c2961089227ccf1de2a44c68a17047520f5d8f"}
+{"path":"/style.css","status":200,"matchesLocal":true,"sha256":"fb1d27aeba977d89ee765a043a32b9f74dc579a64fa7202dc30d2a136bc8f6e4","localSha256":"fb1d27aeba977d89ee765a043a32b9f74dc579a64fa7202dc30d2a136bc8f6e4"}
+HOST https://2ff51f8e-b729-49e2-bad8-6844ff43cc73-00-1dytn2d5rdp6t.picard.replit.dev
+{"path":"/","status":200,"matchesLocal":true,"sha256":"396bf31970168078aa280827c570c7916e64495fe89166e76a50242157a517b9","localSha256":"396bf31970168078aa280827c570c7916e64495fe89166e76a50242157a517b9","revision":true,"simulation":true,"latestBuild":true}
+{"path":"/app.js","status":200,"matchesLocal":true,"sha256":"1d56492d322d5ba18efd4a18237198b16001e8e128e55e5027e22a219fc531fb","localSha256":"1d56492d322d5ba18efd4a18237198b16001e8e128e55e5027e22a219fc531fb"}
+{"path":"/analysis.mjs","status":200,"matchesLocal":true,"sha256":"0031511596fed92212729241679e1acde30af261ed7841c7b97a9740d0dcf7b7","localSha256":"0031511596fed92212729241679e1acde30af261ed7841c7b97a9740d0dcf7b7"}
+{"path":"/rules.mjs","status":200,"matchesLocal":true,"sha256":"a05ca1e8eec7dd98a8d8e43b70c2961089227ccf1de2a44c68a17047520f5d8f","localSha256":"a05ca1e8eec7dd98a8d8e43b70c2961089227ccf1de2a44c68a17047520f5d8f"}
+{"path":"/style.css","status":200,"matchesLocal":true,"sha256":"fb1d27aeba977d89ee765a043a32b9f74dc579a64fa7202dc30d2a136bc8f6e4","localSha256":"fb1d27aeba977d89ee765a043a32b9f74dc579a64fa7202dc30d2a136bc8f6e4"}
