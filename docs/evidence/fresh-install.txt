@@ -1,0 +1,49 @@
+
+> trawd@1.0.0 verify:clean
+> node tests/verify-clean.mjs
+
+Clean directory: copied only distributable source; no node_modules, secrets or workspace state.
+$ npm install
+
+up to date, audited 1 package in 898ms
+
+found 0 vulnerabilities
+
+$ npm test
+
+> trawd@1.0.0 test
+> node --test tests/*.test.mjs
+
+✔ Typical enquiry preserves supplied facts without inferring urgency (2.900284ms)
+✔ Ambiguous enquiry retains multiple possible trades and unknown cause (0.270078ms)
+✔ Empty, short and excessive messages rejected (0.206894ms)
+✔ Vague enquiry does not invent a bathroom renovation (0.163582ms)
+✔ Changed location is extracted rather than inheriting South Bend (1.63191ms)
+✔ Adversarial text cannot inherit a prepared answer (0.784692ms)
+✔ Changed weekday is accurate in fields and summary (0.219662ms)
+✔ Punctuation and alternate faucet wording stay bounded (0.210138ms)
+✔ Electrical symptoms with damp retain caution without diagnosis (0.932004ms)
+✔ Maintenance is tentative and unrelated input is manual (0.513466ms)
+✔ Negation and multiple schedules are never silently resolved (0.211362ms)
+✔ Repeat analysis returns independent details and unknowns (0.145764ms)
+✔ HTTP assets and private-path protection from an ephemeral server (111.869003ms)
+ℹ tests 13
+ℹ suites 0
+ℹ pass 13
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 445.539202
+
+$ PORT=0 npm start
+> trawd@1.0.0 start
+> node server.mjs
+
+Trawd revision 2026-11-19 running on port 41813.
+GET / -> 200
+GET /app.js -> 200
+GET /analysis.mjs -> 200
+GET /rules.mjs -> 200
+GET /style.css -> 200
+PASS: fresh copy installation, tests, npm start, HTML and all module/style assets.

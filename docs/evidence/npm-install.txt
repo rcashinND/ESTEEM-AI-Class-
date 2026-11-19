@@ -1,0 +1,8 @@
+npm warn reify invalid or damaged lockfile detected
+npm warn reify please re-try this operation once it completes
+npm warn reify so that the damage can be corrected, or perform
+npm warn reify a fresh install with no lockfile if the problem persists.
+
+removed 3 packages, and audited 1 package in 15s
+
+found 0 vulnerabilities

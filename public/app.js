@@ -9,7 +9,7 @@ $('clear').addEventListener('click',()=>{$('enquiry').value='';invalidate();$('e
 function list(id,items){$(id).replaceChildren(...items.map(text=>{const li=document.createElement('li');li.textContent=text;return li;}));}
 $('form').addEventListener('submit',e=>{e.preventDefault();invalidate();try{
  const lead=analyse($('enquiry').value);
- $('mode').textContent=lead.fixture?'Prepared response · simulated AI':'Unsupported message · manual review needed';
+ $('mode').textContent=lead.fixture?'Prepared response · simulated AI':lead.mode==='rules'?'Limited rule-based analysis · review required':'Unsupported message · manual review needed';
  $('uncertainty').textContent=lead.note;
  $('safety').textContent=lead.safety;$('safety').hidden=!lead.safety;
  $('summary').textContent=lead.summary;
