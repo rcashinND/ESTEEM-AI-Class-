@@ -42,4 +42,10 @@ For each example click its button then Analyse Enquiry (buttons fill but do not 
 Edit Tuesday to Wednesday and reanalyse; confirm the mode changes from prepared to rule-based. Clear before testing blank input. At 390px ensure controls remain reachable.
 
 ## Remaining verification
-The current public release must be republished and checked independently. Video, Drive access and Canvas submission are not tested or claimed. Fresh GitHub download and browser results are recorded below only after execution.
+The current public release must be republished and checked independently. Video, Drive access and Canvas submission are not tested or claimed.
+
+## Fresh GitHub download — PASS
+
+Committed the corrected source and evidence to the authorised course repository main branch and verified its head as `0eaf47b2db50ea5258e3fbc7a462c216b5f0efed`. Downloaded that exact public GitHub archive, extracted it to a clean folder, then ran the clean verifier against the extracted source. Installation reported zero vulnerabilities; all 13 tests passed; real npm start and all five assets returned 200. [Full output](evidence/github-clean-install.txt).
+
+This is stronger than a local workspace-only check. The downloaded application source is identical to the browser-tested code. Subsequent documentation-only evidence updates do not change the tested application.
