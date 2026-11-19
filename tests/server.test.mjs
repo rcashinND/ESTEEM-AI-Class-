@@ -12,7 +12,7 @@ test('HTTP assets and private-path protection from an ephemeral server',async()=
    assert.ok((await r.text()).length>50);assert.equal(r.headers.get('cache-control'),'no-store');
   }
   const html=await (await fetch(base)).text();assert.match(html,/Simulated AI prototype/);assert.match(html,/19 November 2026/);
-  for(const path of ['/server.mjs','/package.json','/.env','/README.md','/api/requests'])assert.equal((await fetch(base+path)).status,404);
+  for(const path of ['/server.mjs','/package.json','/.env','/README.md','/api/requests','/constructor','/toString','/__proto__'])assert.equal((await fetch(base+path)).status,404);
   assert.equal((await fetch(base,{method:'POST',body:'private enquiry'})).status,404);
   const head=await fetch(base,{method:'HEAD'});assert.equal(head.status,200);assert.equal(await head.text(),'');
  }finally{await new Promise(resolve=>server.close(resolve));}

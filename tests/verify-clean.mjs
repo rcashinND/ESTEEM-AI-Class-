@@ -5,18 +5,21 @@ import {execFileSync, spawn} from 'node:child_process';
 import assert from 'node:assert/strict';
 const source=resolve(process.argv[2] || '.');
 const dir=mkdtempSync(join(tmpdir(),'trawd-clean-'));
+// Fresh HOME and an allowlisted environment: no app secrets, npm credentials,
+// inherited workspace configuration or existing node_modules are required.
+const env={PATH:process.env.PATH, HOME:dir, TMPDIR:tmpdir(), LANG:'C.UTF-8'};
 let child;
 try {
  for(const name of ['package.json','package-lock.json','server.mjs','public','tests','README.md','.replit','docs']) {
   if(existsSync(join(source,name)))cpSync(join(source,name),join(dir,name),{recursive:true});
  }
- console.log('Clean directory: copied only distributable source; no node_modules, secrets or workspace state.');
+ console.log('Clean directory: copied only distributable source; fresh HOME, allowlisted environment, no node_modules or app secrets.');
  for(const args of [['install'],['test']]) {
   console.log(`$ npm ${args.join(' ')}`);
-  console.log(execFileSync('npm',args,{cwd:dir,encoding:'utf8',timeout:60000,stdio:['ignore','pipe','pipe']}));
+  console.log(execFileSync('npm',args,{cwd:dir,env,encoding:'utf8',timeout:60000,stdio:['ignore','pipe','pipe']}));
  }
  console.log('$ PORT=0 npm start');
- child=spawn('npm',['start'],{cwd:dir,env:{...process.env,PORT:'0'},detached:true,stdio:['ignore','pipe','pipe']});
+ child=spawn('npm',['start'],{cwd:dir,env:{...env,PORT:'0'},detached:true,stdio:['ignore','pipe','pipe']});
  let output='';
  const port=await new Promise((resolve,reject)=>{
   const timer=setTimeout(()=>reject(new Error('Startup timeout')),15000);

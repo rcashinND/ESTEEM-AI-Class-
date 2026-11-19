@@ -4,7 +4,10 @@ import {pathToFileURL} from 'node:url';
 const files = {'/':'index.html', '/index.html':'index.html', '/app.js':'app.js', '/analysis.mjs':'analysis.mjs', '/rules.mjs':'rules.mjs', '/style.css':'style.css'};
 const types = {html:'text/html; charset=utf-8',js:'text/javascript; charset=utf-8',mjs:'text/javascript; charset=utf-8',css:'text/css; charset=utf-8'};
 export function createServer() { return http.createServer(async (req,res) => {
-  const name=files[new URL(req.url,'http://localhost').pathname];
+  let pathname;
+  try { pathname = new URL(req.url,'http://localhost').pathname; }
+  catch {res.writeHead(400);res.end('Invalid request');return;}
+  const name=Object.hasOwn(files, pathname) ? files[pathname] : undefined;
   if (!name || !['GET','HEAD'].includes(req.method)) {res.writeHead(404);res.end('Not found');return;}
   try {
     const body=await readFile(new URL(`./public/${name}`,import.meta.url));

@@ -13,7 +13,7 @@ $('form').addEventListener('submit',e=>{e.preventDefault();invalidate();try{
  $('uncertainty').textContent=lead.note;
  $('safety').textContent=lead.safety;$('safety').hidden=!lead.safety;
  $('summary').textContent=lead.summary;
- $('fields').replaceChildren(...[['trade','Likely trade(s)'],['job','Job type'],['location','Location'],['timing','Timing'],['urgency','Urgency'],['scope','Scope']].map(([key,label])=>{const d=document.createElement('div');const dt=document.createElement('dt');dt.textContent=label;const dd=document.createElement('dd');dd.textContent=lead[key];d.append(dt,dd);return d;}));
+ $('fields').replaceChildren(...[['trade','Likely trade(s)'],['job','Job type'],['location','Location'],['timing','Timing'],['urgency','Urgency'],['scope','Scope'],['materials','Materials / availability']].map(([key,label])=>{const d=document.createElement('div');const dt=document.createElement('dt');dt.textContent=label;const dd=document.createElement('dd');dd.textContent=lead[key];d.append(dt,dd);return d;}));
  list('details',lead.details);list('missing',lead.missing);
  $('photo-section').hidden=!lead.photo;$('result').hidden=false;$('empty').hidden=true;$('result-heading').focus();
  }catch(err){$('error').textContent=err.message;$('error').hidden=false;$('enquiry').focus();}});
