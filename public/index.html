@@ -1,10 +1,58 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Trawd turns a customer enquiry into a structured job summary for tradesperson review. First working slice with simulated AI."><title>Trawd | Enquiry review</title><link rel="stylesheet" href="/style.css"><script type="module" src="/app.js"></script></head>
-<body><header><a href="/" class="brand">Trawd<span class="brand-dot">.</span></a><span class="pill">FIRST WORKING SLICE</span></header>
-<main><section class="intro"><p class="eyebrow">LESS ADMIN. A CLEARER START.</p><h1>Make sense of<br>a messy enquiry.</h1><p>Paste a customer’s message. Review the job, the possible trades and what still needs asking.</p></section>
-<div class="notice"><strong>Simulated AI prototype.</strong> Three examples use prepared summaries. Other messages use limited rules for supported work patterns, explicit location phrases, weekdays and urgency, or receive a manual-review result. Materials wording is treated conservatively; supported trades are tentative suggestions, not diagnoses. Rules do not understand arbitrary enquiries. No live AI model is connected. <span>Revision: 19 November 2026.</span> <span>Build: review-safeguards.</span></div>
-<div class="layout"><section class="card input-card"><div class="section-top"><span class="number">01</span><h2>Customer enquiry</h2></div><p class="muted">For the tradesperson managing incoming enquiries. Use fictional details; no exact address or contact information is needed.</p>
-<form id="form" novalidate><label for="enquiry">Original message</label><textarea id="enquiry" rows="9" maxlength="4000" placeholder="Paste the customer's enquiry here…" aria-describedby="counter error"></textarea><div id="counter" class="counter">0 / 4,000</div><p id="error" role="alert" class="error" hidden></p>
-<p class="sample-label">Try a prepared example</p><div class="examples"><button type="button" data-example="typical">Clear job</button><button type="button" data-example="vague">Vague enquiry</button><button type="button" data-example="challenge">Multiple trades</button></div>
-<div class="actions"><button class="primary" type="submit">Analyse Enquiry <span aria-hidden="true">↗</span></button><button type="button" id="clear">Clear</button></div></form><p class="privacy">Your enquiry and photos stay in this tab. Nothing is uploaded, published or saved by the app. Refreshing clears the work.</p></section>
-<section class="card result-card" aria-labelledby="result-heading"><div class="section-top"><span class="number">02</span><h2 id="result-heading" tabindex="-1">Tradesperson review</h2></div><div id="empty"><div class="empty-icon" aria-hidden="true">≡</div><h3>The details, without the guesswork.</h3><p>Start with an enquiry. The structured summary will appear here, beside the original message.</p><p class="muted">You decide what happens next.</p></div><div id="result" hidden><p id="mode" class="badge"></p><div id="uncertainty" class="callout"></div><p id="safety" class="callout safety" hidden></p><h3>Summary</h3><p id="summary"></p><dl id="fields"></dl><h3>Important details</h3><ul id="details"></ul><h3>Missing information / follow-up</h3><ul id="missing"></ul><section id="photo-section" hidden><h3>Could a photo clarify the visible problem?</h3><p>Only if safe, add an overview from a distance. Do not approach electrical faults or open fittings. Photos cannot establish hidden causes, location or urgency.</p><p class="muted">Local preview only. Images are not analysed and do not change the summary. Up to 3 JPEG, PNG or WebP images, 5 MB each.</p><label for="photos">Optional photos</label><input id="photos" type="file" accept="image/jpeg,image/png,image/webp" multiple><p id="photo-error" role="alert" class="error" hidden></p><div id="previews"></div></section><p class="review-note">Compare this summary with the original enquiry. No job is accepted, rejected, priced or sent to anyone.</p><button id="review" class="primary" type="button">Mark as reviewed</button><p id="reviewed" role="status" hidden>Reviewed in this tab. You remain responsible for deciding the next step.</p></div></section></div>
-<footer>Trawd · Enquiry → structured job summary → human review</footer></main></body></html>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Describe your job, add helpful details and an optional photo, and prepare a concise brief. Simulated prototype; no live AI.">
+  <title>Trawd AI | Customer enquiry</title>
+  <link rel="stylesheet" href="/style.css"><script type="module" src="/app.js"></script>
+</head>
+<body class="customer-view">
+<header><a href="/customer" class="brand">Trawd<span>AI</span></a><nav aria-label="Views"><a href="/customer" aria-current="page">Customer enquiry</a><a href="/review">Tradesperson review</a></nav><span class="pill">CUSTOMER VIEW</span></header>
+<main>
+  <div class="intro"><p class="eyebrow">01 / CUSTOMER ENQUIRY</p><h1>A little detail.<br>A clearer start.</h1><p>Tell us what needs attention. We’ll help you prepare a useful job brief—without needing to know the right trade.</p></div>
+  <ol class="steps" aria-label="Enquiry stages"><li aria-current="step">1. Describe &amp; clarify</li><li>2. Tradesperson brief</li></ol>
+  <aside class="notice"><strong>Simulated AI prototype.</strong> Prepared examples and limited rules—not live language or image AI. Your answers improve the brief; trades remain suggestions. <span>Revision: 19 November 2026. Build: two-stage-enquiry.</span></aside>
+  <form id="form" novalidate>
+    <div class="customer-layout">
+      <section class="card describe-card" aria-labelledby="describe-heading">
+        <p class="eyebrow">YOUR WORDS ARE ENOUGH TO START</p><h2 id="describe-heading">What can we help with?</h2>
+        <label for="enquiry">Describe the problem or work</label>
+        <textarea id="enquiry" rows="5" maxlength="4000" placeholder="For example: something is broken in my kitchen…" aria-describedby="description-help counter error"></textarea>
+        <p id="description-help" class="muted">A few words are fine. Please leave out names, phone numbers and exact addresses.</p>
+        <div id="counter" class="counter">0 / 4,000</div>
+        <p id="error" role="alert" class="error" hidden></p>
+        <p class="sample-label">Try a fictional enquiry</p>
+        <div class="examples"><button type="button" data-example="house">House help</button><button type="button" data-example="kitchen">Kitchen problem</button><button type="button" data-example="typical">Clear job</button><button type="button" data-example="challenge">Multiple trades</button></div>
+        <section id="photo-section" class="photo-request" aria-labelledby="photo-heading">
+          <h3 id="photo-heading">A photo can help</h3><p id="photo-prompt">Add a photo if you would like the tradesperson to see the problem.</p>
+          <p class="muted">Optional—you can skip it. Attached for a person to inspect, never analysed by AI. Do not approach electrical faults or open fittings to take a photo.</p>
+          <label for="photos">Attach photos (optional)</label><input id="photos" type="file" accept="image/jpeg,image/png,image/webp" multiple aria-describedby="photo-help photo-error">
+          <p id="photo-help" class="muted">Up to 3 JPEG, PNG or WebP images, 5 MB each. Photos are resized and metadata/filenames are not passed on.</p>
+          <p id="photo-error" role="alert" class="error" hidden></p><p id="photo-status" role="status"></p><div id="previews" class="photo-grid"></div>
+          <button id="skip-photo" type="button" class="text-button">Continue without photos</button>
+        </section>
+      </section>
+      <section class="card clarify-card" aria-labelledby="clarify-heading">
+        <p class="eyebrow">JUST THE USEFUL BITS</p><h2 id="clarify-heading">A few quick details</h2>
+        <p id="guidance">Start typing and we’ll ask only for details the rules could not identify.</p>
+        <p id="progress" role="status" aria-live="polite">No description yet</p><progress id="completion" max="5" value="0" aria-label="Clarification progress"></progress>
+        <div id="questions" hidden>
+          <fieldset data-question="work"><legend>What needs doing, and on what?</legend>
+            <label for="work">Closest description</label><select id="work"><option value="">Not sure yet</option><option value="tap">Replace a tap / faucet</option><option value="plumbing">Plumbing assessment or repair</option><option value="electrical">Electrical work or assessment</option><option value="maintenance">Repair a door, fence or fitting</option><option value="other">Something else</option></select>
+            <label for="detail">A short detail about the item or task (optional)</label><input id="detail" maxlength="180" placeholder="e.g. kitchen cupboard door has come off its hinge">
+          </fieldset>
+          <fieldset data-question="area"><legend>What town or area is the job in?</legend><label for="area">General area only</label><input id="area" maxlength="80" autocomplete="off" placeholder="e.g. South Bend or Dublin"></fieldset>
+          <fieldset data-question="timing"><legend>When would you prefer help?</legend><label for="timing">Preferred timing</label><select id="timing"><option value="">Not sure yet</option><option value="flexible">Flexible</option><option value="soon">Within a few days</option><option value="week">This week</option><option value="custom">A particular day or time</option></select><div id="time-extra" hidden><label for="timeDetail">Preferred day or time</label><input id="timeDetail" maxlength="80" required aria-describedby="time-error" placeholder="e.g. next Wednesday afternoon"><p id="time-error" role="alert" class="error" hidden></p></div></fieldset>
+          <fieldset data-question="urgency"><legend>How soon does it need attention?</legend><label for="urgency">Urgency</label><select id="urgency"><option value="">Not sure yet</option><option value="routine">Routine / not urgent</option><option value="soon">Needs attention soon</option><option value="urgent">Urgent — discuss promptly</option></select></fieldset>
+          <fieldset data-question="safety"><legend>Have you noticed any safety concern?</legend><label for="safety">What have you noticed?</label><select id="safety"><option value="">Not sure</option><option value="none">No concerns noticed</option><option value="electrical">An electrical concern</option><option value="water">A water leak or damp</option><option value="other">Another concern</option></select><div id="safety-extra" hidden><label for="safetyDetail">Brief concern (optional)</label><input id="safetyDetail" maxlength="140" placeholder="Only describe what you have noticed"></div></fieldset>
+        </div>
+        <p id="customer-safety" class="callout safety" role="status" hidden></p>
+        <div class="completion-note"><strong>You can leave anything you don’t know.</strong><p>Unknowns stay visible for the tradesperson to clarify. This prototype cannot assess an emergency; seek appropriate local help if there is immediate danger.</p></div>
+        <p class="privacy">Same-tab demonstration, not a delivery service. Submitting passes only the structured brief and optional resized photos to the review page for up to one hour. Your raw description is not included. No server upload, contact details or location permissions.</p>
+        <div class="actions"><button class="primary" id="submit" type="submit">Submit enquiry <span aria-hidden="true">→</span></button><button id="clear" type="button">Start over</button></div>
+        <p id="status" role="status"></p>
+      </section>
+    </div>
+  </form>
+  <footer>Trawd AI · Customer details → concise brief → human review</footer>
+</main></body></html>

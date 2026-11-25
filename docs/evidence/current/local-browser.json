@@ -1,0 +1,83 @@
+{
+  "target": "http://127.0.0.1:3218",
+  "userAgent": "Chromium, signed-out isolated browser context",
+  "results": [
+    {
+      "case": "Invalid: empty enquiry",
+      "status": "PASS",
+      "actual": "Please describe the problem, even in a few words."
+    },
+    {
+      "case": "Typical 1: prepared tap replacement",
+      "status": "PASS",
+      "actual": "PREPARED SIMULATED EXAMPLE, WITH CUSTOMER CLARIFICATIONS\n\nKitchen tap replacement\nREADY FOR HUMAN REVIEW\n\nCustomer-stated details and tentative trade suggestions; no diagnosis or safety certification.\n\nSUGGESTED TRADES\nTentative \u2014 Plumber\nGENERAL AREA\nSouth Bend\nPREFERRED TIMING\nNext Tuesday (customer\u2019s wording)\nURGENCY\nNot provided\nKNOWN SAFETY CONCERNS\nNot confirmed\nMATERIALS / AVAILABILITY\nCustomer states the replacement tap has been bought; availability and compatibility need confirmation.\nJOB DETAILS & CUSTOMER-STATED SCOPE\nThe kitchen tap is leaking.\nThe customer has bought the replacement tap.\nESSENTIAL UNKNOWNS & RECOMMENDED FOLLOW-UP\nConfirm how soon attention is needed.\nConfirm tap compatibility, access and severity of any leak.\nAsk whether any safety concerns have been noticed.\n\nOnly structured job details are shown here. Nothing has been quoted, accepted, priced or sent to another person.\n\nMark as reviewed\nNew customer enquiry"
+    },
+    {
+      "case": "Typical 2: edited plumbing appointment",
+      "status": "PASS",
+      "actual": "LIMITED RULE-BASED BRIEF, WITH CUSTOMER CLARIFICATIONS\n\nTap / faucet replacement\nREADY FOR HUMAN REVIEW\n\nCustomer-stated details and tentative trade suggestions; no diagnosis or safety certification.\n\nSUGGESTED TRADES\nTentative \u2014 Plumber\nGENERAL AREA\nSouth Bend\nPREFERRED TIMING\nnext Wednesday\nURGENCY\nNot provided\nKNOWN SAFETY CONCERNS\nNot confirmed\nMATERIALS / AVAILABILITY\nThe customer states they have bought the replacement tap.\nJOB DETAILS & CUSTOMER-STATED SCOPE\nTap / faucet replacement requested.\nThe customer states they have bought the replacement tap.\nESSENTIAL UNKNOWNS & RECOMMENDED FOLLOW-UP\nConfirm how soon attention is needed.\nConfirm tap compatibility, access and severity of any leak.\nAsk whether any safety concerns have been noticed.\n\nOnly structured job details are shown here. Nothing has been quoted, accepted, priced or sent to another person.\n\nMark as reviewed\nNew customer enquiry"
+    },
+    {
+      "case": "Challenge: vague intake, five clarification groups, retained visit timing and no-photo review",
+      "status": "PASS",
+      "actual": "LIMITED RULE-BASED BRIEF, WITH CUSTOMER CLARIFICATIONS\n\nDoor, fence or fitting repair\nREADY FOR HUMAN REVIEW\n\nCustomer-stated details and tentative trade suggestions; no diagnosis or safety certification.\n\nPossible electrical concern: do not touch or use affected fittings, or approach them to take a photo. Seek qualified assessment; this prototype cannot assess safety or urgency.\n\nSUGGESTED TRADES\nTentative \u2014 Electrician; Carpenter or general maintenance\nGENERAL AREA\nCork\nPREFERRED TIMING\nWednesday afternoon\nURGENCY\nUrgent \u2014 customer requests prompt contact\nKNOWN SAFETY CONCERNS\nElectrical concern reported by customer\nMATERIALS / AVAILABILITY\nNot provided\nJOB DETAILS & CUSTOMER-STATED SCOPE\nCustomer-stated scope: Loose kitchen cupboard door hinge\nCustomer-stated concern: Socket sometimes sparks\nESSENTIAL UNKNOWNS & RECOMMENDED FOLLOW-UP\nArrange qualified assessment of the electrical concern; do not infer its cause.\n\nOnly structured job details are shown here. Nothing has been quoted, accepted, priced or sent to another person.\n\nMark as reviewed\nNew customer enquiry"
+    },
+    {
+      "case": "Interaction: all options across four native selects",
+      "status": "PASS",
+      "actual": [
+        "Closest description: Not sure yet",
+        "Closest description: Replace a tap / faucet",
+        "Closest description: Plumbing assessment or repair",
+        "Closest description: Electrical work or assessment",
+        "Closest description: Repair a door, fence or fitting",
+        "Closest description: Something else",
+        "Preferred timing: Not sure yet",
+        "Preferred timing: Flexible",
+        "Preferred timing: Within a few days",
+        "Preferred timing: This week",
+        "Preferred timing: A particular day or time",
+        "Urgency: Not sure yet",
+        "Urgency: Routine / not urgent",
+        "Urgency: Needs attention soon",
+        "Urgency: Urgent \u2014 discuss promptly",
+        "What have you noticed?: Not sure",
+        "What have you noticed?: No concerns noticed",
+        "What have you noticed?: An electrical concern",
+        "What have you noticed?: A water leak or damp",
+        "What have you noticed?: Another concern"
+      ]
+    },
+    {
+      "case": "Risk: overlapping fence and electrical work",
+      "status": "PASS",
+      "actual": "LIMITED RULE-BASED BRIEF, WITH CUSTOMER CLARIFICATIONS\n\nAssessment of reported electrical symptoms; Assessment of stated repair work\nREADY FOR HUMAN REVIEW\n\nCustomer-stated details and tentative trade suggestions; no diagnosis or safety certification.\n\nPossible electrical concern: do not touch or use affected fittings, or approach them to take a photo. Seek qualified assessment; this prototype cannot assess safety or urgency.\n\nSUGGESTED TRADES\nTentative \u2014 Electrician; Carpenter or general maintenance\nGENERAL AREA\nDublin\nPREFERRED TIMING\ntomorrow\nURGENCY\nNot provided\nKNOWN SAFETY CONCERNS\nElectrical safety needs qualified confirmation; cause unconfirmed\nMATERIALS / AVAILABILITY\nNot provided\nJOB DETAILS & CUSTOMER-STATED SCOPE\nCustomer requests repair of: fence.\nCustomer reports electrical symptoms affecting: faulty socket.\nElectrical symptoms are reported; their cause and any connection with water remain unconfirmed.\nRepair work needs carpentry or general maintenance assessment.\nESSENTIAL UNKNOWNS & RECOMMENDED FOLLOW-UP\nConfirm the affected item, symptoms and extent of work.\nConfirm how soon attention is needed.\nArrange qualified assessment of the electrical concern; do not infer its cause.\n\nOnly structured job details are shown here. Nothing has been quoted, accepted, priced or sent to another person.\n\nMark as reviewed\nNew customer enquiry"
+    },
+    {
+      "case": "Risk: explicitly negated purchase",
+      "status": "PASS",
+      "actual": "LIMITED RULE-BASED BRIEF, WITH CUSTOMER CLARIFICATIONS\n\nHome enquiry \u2014 assessment needed\nREADY FOR HUMAN REVIEW\n\nCustomer-stated details and tentative trade suggestions; no diagnosis or safety certification.\n\nSUGGESTED TRADES\nNot established \u2014 confirm the appropriate trade\nGENERAL AREA\nNot provided\nPREFERRED TIMING\nNot provided\nURGENCY\nNot provided\nKNOWN SAFETY CONCERNS\nNot confirmed\nMATERIALS / AVAILABILITY\nPurchase / current availability not confirmed \u2014 ask the customer.\nJOB DETAILS & CUSTOMER-STATED SCOPE\nThe customer needs help assessing work at home; the specific task still needs clarification.\nESSENTIAL UNKNOWNS & RECOMMENDED FOLLOW-UP\nConfirm the exact work or item that needs attention.\nConfirm the affected item, symptoms and extent of work.\nConfirm the general town or area; arrange an exact address privately if needed.\nAgree a preferred visit day or time.\nConfirm how soon attention is needed.\nConfirm materials availability and compatibility.\nAsk whether any safety concerns have been noticed.\n\nOnly structured job details are shown here. Nothing has been quoted, accepted, priced or sent to another person.\n\nMark as reviewed\nNew customer enquiry"
+    },
+    {
+      "case": "Challenge: unknowns stay open",
+      "status": "FAIL",
+      "actual": "Missing 'manual review' in LIMITED RULE-BASED BRIEF, WITH CUSTOMER CLARIFICATIONS\n\nHome enquiry \u2014 assessment needed\nREADY FOR HUMAN REVIEW\n\nCustomer-stated details and tentative trade suggestions; no diagnosis or safety certification.\n\nSUGGESTED TRADES\nNot established \u2014 confirm the appropriate trade\nGENERAL AREA\nNot provided\nPREFERRED TIMING\nNot provided\nURGENCY\nNot provided\nKNOWN SAFETY CONCERNS\nNot confirmed\nMATERIALS / AVAILABILITY\nNot provided\nJOB DETAILS & CUSTOMER-STATED SCOPE\nThe customer needs help assessing work at home; the specific task still needs clarification.\nESSENTIAL UNKNOWNS & RECOMMENDED FOLLOW-UP\nConfirm the exact work or item that needs attention.\nConfirm the affected item, symptoms and extent of work.\nConfirm the general town or area; arrange an exact address privately if needed.\nAgree a preferred visit day or time.\nConfirm how soon attention is needed.\nAsk whether any safety concerns have been noticed.\n\nOnly structured job details are shown here. Nothing has been quoted, accepted, priced or sent to another person.\n\nMark as reviewed\nNew customer enquiry"
+    },
+    {
+      "case": "Interaction: optional photo attachment, removal, review",
+      "status": "PASS",
+      "actual": "Decodable PNG previewed, removed, reattached and carried into brief without its filename. LIMITED RULE-BASED BRIEF, WITH CUSTOMER CLARIFICATIONS\n\nHome enquiry \u2014 assessment needed\nREADY FOR HUMAN REVIEW\n\nCustomer-stated details and tentative trade suggestions; no diagnosis or safety certification.\n\nSUGGESTED TRADES\nNot established \u2014 confirm the appropriate trade\nGENERAL AREA\nNot provided\nPREFERRED TIMING\nNot provided\nURGENCY\nNot provided\nKNOWN SAFETY CONCERNS\nNot confirmed\nMATERIALS / AVAILABILITY\nNot provided\nJOB DETAILS & CUSTOMER-STATED SCOPE\nThe customer needs help assessing work at home; the specific task still needs clarification.\nPHOTOS FOR VISUAL INSPECTION\n\nAttached photos are for the tradesperson to inspect. No image analysis has been performed.\n\nPhoto 1 \u00b7 not analysed\nESSENTIAL UNKNOWNS & RECOMMENDED FOLLOW-UP\nConfirm the exact work or item that needs attention.\nConfirm the affected item, symptoms and extent of work.\nConfirm the general town or area; arrange an exact address privately if needed.\nAgree a preferred visit day or time.\nConfirm how soon attention is needed.\nAsk whether any safety concerns have been noticed.\n\nOnly structured job details are shown here. Nothing has been quoted, accepted, priced or sent to another person.\n\nMark as reviewed\nNew customer enquiry"
+    },
+    {
+      "case": "Interaction: reset, browser Back and new enquiry",
+      "status": "PASS",
+      "actual": "Start over cleared the input. Browser Back returned to customer form. New customer enquiry cleared the review handoff."
+    },
+    {
+      "case": "Mobile responsive handoff",
+      "status": "PASS",
+      "actual": "390 px emulation. Four non-default selections accepted and no horizontal overflow. LIMITED RULE-BASED BRIEF, WITH CUSTOMER CLARIFICATIONS\n\nPlumbing assessment / repair\nREADY FOR HUMAN REVIEW\n\nCustomer-stated details and tentative trade suggestions; no diagnosis or safety certification.\n\nSUGGESTED TRADES\nTentative \u2014 Plumber\nGENERAL AREA\nNot provided\nPREFERRED TIMING\nThis week\nURGENCY\nNeeds attention soon\nKNOWN SAFETY CONCERNS\nNo concerns noticed by customer (not a safety assessment)\nMATERIALS / AVAILABILITY\nNot provided\nJOB DETAILS & CUSTOMER-STATED SCOPE\nThe customer needs help assessing work at home; the specific task still needs clarification.\nESSENTIAL UNKNOWNS & RECOMMENDED FOLLOW-UP\nConfirm the affected item, symptoms and extent of work.\nConfirm the general town or area; arrange an exact address privately if needed.\n\nOnly structured job details are shown here. Nothing has been quoted, accepted, priced or sent to another person.\n\nMark as reviewed\nNew customer enquiry"
+    }
+  ],
+  "uncaughtErrors": []
+}

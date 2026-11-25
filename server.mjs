@@ -1,7 +1,12 @@
 import http from 'node:http';
 import { readFile } from 'node:fs/promises';
 import {pathToFileURL} from 'node:url';
-const files = {'/':'index.html', '/index.html':'index.html', '/app.js':'app.js', '/analysis.mjs':'analysis.mjs', '/rules.mjs':'rules.mjs', '/style.css':'style.css'};
+const files = {
+ '/':'index.html', '/customer':'index.html', '/customer/':'index.html', '/index.html':'index.html',
+ '/review':'review.html', '/review/':'review.html',
+ '/app.js':'app.js', '/review.js':'review.js', '/analysis.mjs':'analysis.mjs', '/rules.mjs':'rules.mjs',
+ '/workflow.mjs':'workflow.mjs', '/handoff.mjs':'handoff.mjs', '/photos.mjs':'photos.mjs', '/form-controls.mjs':'form-controls.mjs', '/style.css':'style.css'
+};
 const types = {html:'text/html; charset=utf-8',js:'text/javascript; charset=utf-8',mjs:'text/javascript; charset=utf-8',css:'text/css; charset=utf-8'};
 export function createServer() { return http.createServer(async (req,res) => {
   let pathname;
@@ -12,7 +17,7 @@ export function createServer() { return http.createServer(async (req,res) => {
   try {
     const body=await readFile(new URL(`./public/${name}`,import.meta.url));
     // Allow Replit's embedded preview; retain the no-network/no-form policy.
-    res.writeHead(200,{'Content-Type':types[name.split('.').pop()], 'Cache-Control':'no-store', 'X-Content-Type-Options':'nosniff', 'Referrer-Policy':'no-referrer', 'Content-Security-Policy':"default-src 'self'; img-src 'self' blob:; style-src 'self'; script-src 'self'; connect-src 'none'; base-uri 'none'; form-action 'none'"});
+    res.writeHead(200,{'Content-Type':types[name.split('.').pop()], 'Cache-Control':'no-store', 'X-Content-Type-Options':'nosniff', 'Referrer-Policy':'no-referrer', 'Content-Security-Policy':"default-src 'self'; img-src 'self' blob: data:; style-src 'self'; script-src 'self'; connect-src 'none'; base-uri 'none'; form-action 'none'"});
     res.end(req.method==='HEAD'?undefined:body);
   } catch {res.writeHead(500);res.end('Unable to open Trawd. Restart the app and try again.');}
 }); }

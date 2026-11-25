@@ -1,0 +1,105 @@
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm. See `npm help npmrc` for supported config options.
+
+> trawd@1.0.0 verify:clean
+> node tests/verify-clean.mjs
+
+Clean directory: copied only distributable source; fresh HOME, allowlisted environment, no node_modules or app secrets.
+$ npm install
+
+up to date, audited 1 package in 214ms
+
+found 0 vulnerabilities
+
+$ npm test
+
+> trawd@1.0.0 test
+> node --test tests/*.test.mjs
+
+✔ Typical enquiry preserves supplied facts without inferring urgency (3.463618ms)
+✔ Ambiguous enquiry retains multiple possible trades and unknown cause (0.557203ms)
+✔ Empty, short and excessive messages rejected (0.564304ms)
+✔ Vague enquiry does not invent a bathroom renovation (0.317861ms)
+✔ Changed location is extracted rather than inheriting South Bend (5.67208ms)
+✔ Adversarial text cannot inherit a prepared answer (1.03184ms)
+✔ Changed weekday is accurate in fields and summary (0.988795ms)
+✔ Punctuation and alternate faucet wording stay bounded (0.497242ms)
+✔ Electrical symptoms with damp retain caution without diagnosis (0.586807ms)
+✔ Maintenance is tentative and unrelated input is manual (0.846931ms)
+✔ Negation and multiple schedules are never silently resolved (0.683744ms)
+✔ Repeat analysis returns independent details and unknowns (0.283899ms)
+✔ Materials never reverse negative/uncertain wording: I haven't bought the replacement tap. (7.788531ms)
+✔ Materials never reverse negative/uncertain wording: I haven’t bought the replacement tap. (0.928564ms)
+✔ Materials never reverse negative/uncertain wording: I have not bought the replacement tap. (0.336469ms)
+✔ Materials never reverse negative/uncertain wording: I have not yet bought the replacement tap. (0.279984ms)
+✔ Materials never reverse negative/uncertain wording: I have not purchased the replacement tap. (0.301966ms)
+✔ Materials never reverse negative/uncertain wording: Not bought the replacement tap yet. (0.249988ms)
+✔ Materials never reverse negative/uncertain wording: I don't have the replacement tap. (0.261275ms)
+✔ Materials never reverse negative/uncertain wording: I do not have a replacement tap. (0.238481ms)
+✔ Materials never reverse negative/uncertain wording: I have not yet purchased the replacement tap. (0.42321ms)
+✔ Materials never reverse negative/uncertain wording: Replacement tap not yet purchased. (0.33712ms)
+✔ Materials never reverse negative/uncertain wording: We haven't purchased a replacement faucet. (0.263459ms)
+✔ Materials never reverse negative/uncertain wording: I never bought the replacement tap. (0.133812ms)
+✔ Materials never reverse negative/uncertain wording: I am without a replacement tap. (0.10586ms)
+✔ Materials never reverse negative/uncertain wording: I have no replacement tap available. (0.099601ms)
+✔ Materials never reverse negative/uncertain wording: The replacement tap is unavailable. (0.114494ms)
+✔ Materials never reverse negative/uncertain wording: I can't confirm whether I bought the replacement tap. (0.117988ms)
+✔ Contrasting, qualified or attributed materials remain uncertain: I bought the replacement tap but I don't have it. (0.146221ms)
+✔ Contrasting, qualified or attributed materials remain uncertain: I haven't bought the tap, but I have bought the replacement tap. (0.147954ms)
+✔ Contrasting, qualified or attributed materials remain uncertain: I have bought the replacement tap. Actually, I have not bought it. (0.097257ms)
+✔ Contrasting, qualified or attributed materials remain uncertain: I have bought the replacement tap. It is not available. (0.080752ms)
+✔ Contrasting, qualified or attributed materials remain uncertain: I have bought the replacement tap. I returned it. (1.484866ms)
+✔ Contrasting, qualified or attributed materials remain uncertain: I have bought the replacement tap. It has not arrived. (0.242166ms)
+✔ Contrasting, qualified or attributed materials remain uncertain: I may have bought the replacement tap. (0.705667ms)
+✔ Contrasting, qualified or attributed materials remain uncertain: If I have bought the replacement tap, can you fit it? (0.274806ms)
+✔ Contrasting, qualified or attributed materials remain uncertain: Did I buy the replacement tap? (0.215366ms)
+✔ Contrasting, qualified or attributed materials remain uncertain: I have bought the replacement tap for another property. (0.187533ms)
+✔ Contrasting, qualified or attributed materials remain uncertain: The plumber said "I have bought the replacement tap". (0.17152ms)
+✔ Contrasting, qualified or attributed materials remain uncertain: I have bought the replacement tap? I am unsure. (0.301446ms)
+✔ Contrasting, qualified or attributed materials remain uncertain: I have bought the replacement tap, or perhaps I only ordered it. (0.21143ms)
+✔ Contrasting, qualified or attributed materials remain uncertain: I have bought the replacement tap. That was a lie. (0.204659ms)
+✔ Contrasting, qualified or attributed materials remain uncertain: I have bought the replacement tap. I sold it. (0.276368ms)
+✔ Contrasting, qualified or attributed materials remain uncertain: I have bought the replacement tap. The materials are unavailable. (0.187063ms)
+✔ Contrasting, qualified or attributed materials remain uncertain: I have bought the replacement tap. The replacement faucet might be unavailable. (0.216738ms)
+✔ Unqualified first-person purchase is retained: I have bought the replacement tap. (0.420817ms)
+✔ Unqualified first-person purchase is retained: I bought a replacement faucet. (0.221124ms)
+✔ Unqualified first-person purchase is retained: We have purchased the replacement tap. (0.222556ms)
+✔ Unqualified first-person purchase is retained: I’ve already bought the replacement tap. (0.286623ms)
+✔ Exact audited negative purchase never becomes purchased (0.308116ms)
+✔ Overlapping trades accumulate with electrical caution: Please repair the fence and assess a faulty socket in Dublin tomorrow. (0.698657ms)
+✔ Overlapping trades accumulate with electrical caution: Please assess a faulty socket and repair the fence in Dublin tomorrow. (0.305202ms)
+✔ Overlapping trades accumulate with electrical caution: Please replace the tap and repair the fence and assess a faulty socket in Dublin tomorrow. (0.226663ms)
+✔ Overlapping trades accumulate with electrical caution: Please fix the door. The outlet is sparking in Dublin tomorrow. (0.207414ms)
+✔ Independent plumbing and maintenance requests retain both suggestions (0.259933ms)
+✔ Negated work is not classified from keywords (0.282447ms)
+✔ No plumbing is inferred solely from buying a tap during a fence repair (4.189347ms)
+✔ Wednesday preserves the specific plumbing follow-up questions (0.190539ms)
+✔ Explicit variation retains Dublin and Friday (0.103286ms)
+✔ Explicit variation retains South Bend and Monday (0.058608ms)
+✔ Explicit variation retains New York and Thursday (0.049545ms)
+✔ Conflicting dates and locations are not silently selected (0.171499ms)
+✔ Unsupported vague request invents no trade or purchased materials (0.097768ms)
+✔ Invalid input types and whitespace produce useful validation (0.486917ms)
+✔ Electrical caution survives uncertain purchase wording (0.115725ms)
+✔ Multiple positive and negative purchase clauses are order independent (0.302317ms)
+✔ Negating one electrical clause cannot invent a water-related cause (0.144569ms)
+✔ HTTP assets and private-path protection from an ephemeral server (67.837658ms)
+ℹ tests 68
+ℹ suites 0
+ℹ pass 68
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 239.838444
+
+$ PORT=0 npm start
+> trawd@1.0.0 start
+> node server.mjs
+
+Trawd revision 2026-11-19 running on port 36929.
+GET / -> 200
+GET /app.js -> 200
+GET /analysis.mjs -> 200
+GET /rules.mjs -> 200
+GET /style.css -> 200
+PASS: fresh copy installation, tests, npm start, HTML and all module/style assets.

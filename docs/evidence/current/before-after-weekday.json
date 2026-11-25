@@ -1,0 +1,19 @@
+{
+  "input": "I need a plumber to replace a leaking kitchen tap in South Bend next Wednesday. I have bought the replacement tap.",
+  "before": {
+    "commit": "0367e8b",
+    "timing": "Not provided",
+    "summary": "This message is outside the prepared examples. Review the original enquiry and clarify the job with the customer."
+  },
+  "after": {
+    "commit": "f0d3f8d",
+    "timing": "next Wednesday",
+    "summary": "Tap / faucet replacement. Location phrase: South Bend. Timing: next Wednesday (customer’s wording). Review the original message before arranging work.",
+    "followUps": [
+      "What time suits the customer, and is the replacement tap compatible?",
+      "How severe is the leak or other tap problem?",
+      "Confirm materials purchase, current availability and compatibility directly with the customer.",
+      "Confirm the work, quantity, compatibility, access and severity directly with the customer."
+    ]
+  }
+}

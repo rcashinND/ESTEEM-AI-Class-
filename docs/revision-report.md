@@ -1,45 +1,31 @@
-# Prototype revision report
+# Trawd AI prototype revision
 
-## MVP and intended customer
-Trawd supports the self-employed tradesperson who must interpret enquiries as well as perform work. Its central journey remains paste → structured interpretation → compare original → review → decide independently.
+## User and central task
 
-## Feedback and priority
-The supplied two peer reviews and instructor feedback praised retained facts, follow-up questions and uncertainty. Broken reproducibility, an old public release and brittle exact matching prevented evaluation of those strengths. Reliability and truthful representation were prioritised over expansion.
+Independent tradespeople need enough information to decide which jobs to call back about while they are doing other work. The first prototype had the tradesperson paste a customer’s message and review a summary beside it. Three prepared answers demonstrated the intended AI role. Extra wording or a weekday change could send a useful enquiry to a generic fallback.
 
-## Findings
-The earlier connected GitHub repository had assets and its test at root while its server expected public/ and its command expected tests/. The corrected layout is now in GitHub. Earlier public checks also captured an older React TrawdAI page; the current public check instead returns the revised simulated prototype. The final safeguards build is a subsequent source revision and is not yet published.
+In the revised flow, the customer describes the problem, answers short questions about missing details and can attach a photo for human inspection. The tradesperson gets a separate read-only brief with the stated job, tentative trades, area, timing, known safety concerns and follow-ups. The demo hands off inside one browser tab. It does not send work to a tradesperson.
 
-## Technical revision
-The implementation retains Node's built-in server, browser JavaScript and reviewed examples. Rules recognise supported work terms plus explicit place, timing and urgency phrases. Variations do not inherit old fixture facts. Unsupported, negated or conditional work clauses are skipped rather than classified from their keywords; a result without supported work requests manual review. Conflicting scheduling/location phrases remain unclear. Startup validates PORT and reports listen errors. HTTP tests check content types, assets, HEAD and rejected private paths/uploads, including inherited object-property names that previously could generate a spurious 500. A clean verifier uses a temporary source copy, fresh HOME and allowlisted environment to install, test, start and fetch all assets without app secrets.
+## Three priorities
 
-## Final correctness revision after the independent audit
-The audit reproduced two failures despite the earlier 13 passing tests. The purchase regex matched “bought” inside “haven't bought”; trade assignments overwrote earlier categories.
+1. **Make the prototype accessible and reproducible.** Fix the repository layout that caused startup and test failures, verify a clean startup and put the two-stage version on the public URL.
+2. **Preserve useful details and ask for the rest.** Keep the prepared examples. Use limited rules for explicit symptoms, work and time/place phrases, then ask short questions for missing facts. Keep a confirmed visit preference when a description edit mentions when the issue began. Name supported affected items in the review.
+3. **Reduce over-reliance on the brief.** Make simulation and uncertainty visible, keep the relevant caution on electrical cases, distinguish materials purchase from current availability and retain follow-up questions. Remove the raw paragraph from the tradesperson view in line with the intended workflow. This reduces the reader’s ability to compare the summary with its original source.
 
-- Materials now have an explicit review field. Only narrowly supported first-person affirmative purchase sentences can produce a customer-stated purchase. Detected negation, contractions, qualifications, questions, attribution or conflicting statements make materials **Not confirmed**, with a direct clarification question. Buying is not equated with current availability. Negative statements are not converted to positive ones in the covered regressions; unfamiliar language still requires original-text review.
-- Trade candidates are accumulated from supported work clauses. Fence plus faulty socket retains carpenter/general maintenance **and** electrician; plumbing can coexist when separately supported. Electrical caution is independent of materials confirmation and remains visible. No connection between damp and electrical symptoms is diagnosed.
-- Clause-local work detection avoids suggesting a plumber solely because someone mentions buying a tap. The Wednesday variation retains useful plumbing follow-ups. The original prepared examples and edit/reanalyse/review/reset journey remain.
-- Added 55 regression tests beyond the original 13 without loosening their assertions. Initial expanded tests exposed 46 failures before fixes; the completed 68-test suite passes.
+The [peer-feedback response](feedback-response.md) explains which recommendations were adopted, adapted or deferred. The [same weekday edit](evidence/current/before-after-weekday.json) produced an uninformative fallback in the historical code and the correct next Wednesday in revised rules. The [evaluation](testing-evidence.md) records how the current browser flow handles that edit and the new intake controls.
 
-## User experience and disclosure
-The established responsive layout remains. The user sees prepared, rule-based or manual-review status. Editing the original invalidates results and review confirmation; Clear removes stale data. Fields remain read-only: correction means editing the enquiry and running again. Photo previews remain local and explicitly unanalysed. A dated revision marker makes the correct public build recognisable.
+## Method and evidence
 
-## Before / after
+A fresh source export was checked independently with Node 24 and npm 11. `npm test` and a separate clean-copy installation, test and server startup each passed **162/162** tests. The clean server served all 12 checked routes and assets. Signed-out HTTP requests verified the deployed release against source and key flows were replayed in the live browser. A separate local Chromium browser run executed the larger interaction matrix with screenshots, including file selection and an emulated mobile viewport. See the [evaluation and logs](testing-evidence.md) for observed outcomes and one partial result.
 
-| Before | Revised |
-|---|---|
-| Remote root assets; server looked under public/ | Correct directories and HTTP regression |
-| Remote root test; command looked under tests/ | Tests collected from tests/*.test.mjs |
-| Wednesday discarded useful structured fields | Wednesday and other matched facts preserved under rules label |
-| Changed location could not be extracted | Capitalised in/at place phrases retained without old location |
-| README presented intended update without release distinction | Actual test and release states documented separately |
-| Three exact scenarios only | Three reviewed scenarios plus explicitly bounded rules and manual fallback |
-| Negated purchase could become “already purchased” | Conservative, customer-attributed materials states and explicit uncertainty |
-| Maintenance assignment erased electrician suggestion | Supported trades accumulate; electrical warning retained |
+## Concrete risk response
 
-## Methodology and results
-See [testing evidence](testing-evidence.md) for actual commands, browser outcomes and genuine images. The final `npm test` and clean-source install/test/start checks each passed 68/68 tests. These are software checks, not measured accuracy or external validation. The [current HTTP/asset check](evidence/release-public-assets.txt) confirms the public simulated revision works, but its changed assets do not yet match the final safeguards source. Latest-build republishing and production verification remain separate acceptance criteria. Repository delivery and recording status are in the [submission checklist](submission-checklist.md).
+A tradesperson could buy the wrong part or send only one trade if they rely on a fluent but incomplete brief. A customer could also mistake an electrical warning for an assessment of their safety. In the tested cases, the prototype leaves a negated material purchase unconfirmed, explicitly asks a person to verify availability and compatibility, and retains an electrical caution and more than one tentative trade for overlapping work. The review makes the uncertainty visible before marking a brief reviewed. This addresses **over-reliance on automated outputs**. There is no emergency assessment or diagnosis. Unfamiliar wording can still cause specific facts to be missed, and the summary-only layout increases the cost of checking a lost detail.
 
-## Limitations and lessons
-Rules cannot interpret arbitrary natural language, diagnose hidden causes or resolve relative weekdays to dates. Place detection is intentionally narrow; matching a word does not prove a trade is appropriate. Manual review remains essential. No evidence establishes time saved with real tradespeople.
+## Limitations and next evaluation
 
-The main lesson is that source correctness, reproducible installation and public availability are distinct acceptance criteria. A working local UI and an accurate README do not establish that reviewers can access that version. Future evaluation should first verify the release, then compare assessment time and missed questions on unfamiliar enquiries with consenting tradespeople.
+The running product uses prepared examples and deterministic rules. It cannot understand arbitrary language, resolve dates to a calendar, determine fault causes or analyse images. Photos and the brief remain in same-tab session storage for up to an hour and can be cleared. The session is unauthenticated and no job is delivered. Evaluation used fictional inputs and technical QA. It did not measure time saved or interview additional tradespeople.
+
+1. With consenting tradespeople, compare the unanswered questions and triage time for a small set of unfamiliar fictional enquiries and briefs.
+2. Calibrate the mode label for sparse inputs, test conflicts between narrative and structured answers, and evaluate a compact way to verify the provenance of important facts.
+3. Test native mobile controls on physical devices and add keyboard and screen-reader checks before any broader pilot.

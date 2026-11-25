@@ -27,7 +27,7 @@ try {
   child.on('exit',code=>{clearTimeout(timer);reject(new Error(`Early exit ${code}`));});
  });
  console.log(output.trim());
- for(const path of ['/','/app.js','/analysis.mjs','/rules.mjs','/style.css']){
+ for(const path of ['/','/customer','/review','/app.js','/review.js','/analysis.mjs','/rules.mjs','/workflow.mjs','/handoff.mjs','/photos.mjs','/form-controls.mjs','/style.css']){
   const r=await fetch(`http://127.0.0.1:${port}${path}`);assert.equal(r.status,200);console.log(`GET ${path} -> ${r.status}`);
  }
  console.log('PASS: fresh copy installation, tests, npm start, HTML and all module/style assets.');

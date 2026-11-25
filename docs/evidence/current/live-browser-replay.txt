@@ -1,0 +1,75 @@
+Public host: https://trade-lead-ai.replit.app/
+Date: November 24, 2026 (Eastern time)
+Connected Chrome, fictional inputs.
+
+Vague enquiry, five clarification groups and skipped optional photo:
+Retained visit field after adding incident onset: Wednesday afternoon
+
+LIMITED RULE-BASED BRIEF, WITH CUSTOMER CLARIFICATIONS
+
+Door, fence or fitting repair
+READY FOR HUMAN REVIEW
+
+Customer-stated details and tentative trade suggestions; no diagnosis or safety certification.
+
+Possible electrical concern: do not touch or use affected fittings, or approach them to take a photo. Seek qualified assessment; this prototype cannot assess safety or urgency.
+
+SUGGESTED TRADES
+Tentative — Electrician; Carpenter or general maintenance
+GENERAL AREA
+Cork
+PREFERRED TIMING
+Wednesday afternoon
+URGENCY
+Urgent — customer requests prompt contact
+KNOWN SAFETY CONCERNS
+Electrical concern reported by customer
+MATERIALS / AVAILABILITY
+Not provided
+JOB DETAILS & CUSTOMER-STATED SCOPE
+Customer-stated scope: Loose kitchen cupboard door hinge
+Customer-stated concern: Socket sometimes sparks
+ESSENTIAL UNKNOWNS & RECOMMENDED FOLLOW-UP
+Arrange qualified assessment of the electrical concern; do not infer its cause.
+
+Only structured job details are shown here. Nothing has been quoted, accepted, priced or sent to another person.
+
+Mark as reviewed
+New customer enquiry
+
+Fence and faulty socket, Dublin tomorrow:
+LIMITED RULE-BASED BRIEF, WITH CUSTOMER CLARIFICATIONS
+
+Assessment of reported electrical symptoms; Assessment of stated repair work
+READY FOR HUMAN REVIEW
+
+Customer-stated details and tentative trade suggestions; no diagnosis or safety certification.
+
+Possible electrical concern: do not touch or use affected fittings, or approach them to take a photo. Seek qualified assessment; this prototype cannot assess safety or urgency.
+
+SUGGESTED TRADES
+Tentative — Electrician; Carpenter or general maintenance
+GENERAL AREA
+Dublin
+PREFERRED TIMING
+tomorrow
+URGENCY
+Not provided
+KNOWN SAFETY CONCERNS
+Electrical safety needs qualified confirmation; cause unconfirmed
+MATERIALS / AVAILABILITY
+Not provided
+JOB DETAILS & CUSTOMER-STATED SCOPE
+Customer requests repair of: fence.
+Customer reports electrical symptoms affecting: faulty socket.
+Electrical symptoms are reported; their cause and any connection with water remain unconfirmed.
+Repair work needs carpentry or general maintenance assessment.
+ESSENTIAL UNKNOWNS & RECOMMENDED FOLLOW-UP
+Confirm the affected item, symptoms and extent of work.
+Confirm how soon attention is needed.
+Arrange qualified assessment of the electrical concern; do not infer its cause.
+
+Only structured job details are shown here. Nothing has been quoted, accepted, priced or sent to another person.
+
+Mark as reviewed
+New customer enquiry

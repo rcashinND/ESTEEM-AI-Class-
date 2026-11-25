@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Trawd AI | Tradesperson review</title><link rel="stylesheet" href="/style.css"><script type="module" src="/review.js"></script></head>
+<body class="review-view">
+<header><a href="/customer" class="brand">Trawd<span>AI</span></a><nav aria-label="Views"><a href="/customer">Customer enquiry</a><a href="/review" aria-current="page">Tradesperson review</a></nav><span class="pill">TRADESPERSON VIEW</span></header>
+<main>
+  <div class="intro"><p class="eyebrow">02 / TRADESPERSON REVIEW</p><h1>The job.<br>Not the noise.</h1><p>A concise customer-stated brief. Confirm the essentials before arranging work.</p></div>
+  <aside class="notice"><strong>Simulated prototype.</strong> Prepared examples and limited rules—not live language or image AI. No diagnosis or safety certification. <span>Build: two-stage-enquiry.</span></aside>
+  <section id="empty" class="card empty-state"><h2>No current enquiry to review</h2><p>Submit an enquiry in this browser tab first. Briefs expire after one hour and are removed when the customer starts over or changes their enquiry.</p><a class="primary button-link" href="/customer">Create a customer enquiry</a></section>
+  <article id="brief" class="card brief-card" hidden aria-labelledby="job-title">
+    <div class="brief-heading"><div><p id="brief-mode" class="badge"></p><h2 id="job-title" tabindex="-1"></h2></div><span class="pill">READY FOR HUMAN REVIEW</span></div>
+    <p id="uncertainty" class="muted"></p><p id="safety-warning" class="callout safety" hidden></p>
+    <dl id="fields" class="brief-fields"></dl>
+    <section><h3>Job details &amp; customer-stated scope</h3><ul id="scope"></ul></section>
+    <section id="review-photos" hidden><h3>Photos for visual inspection</h3><p id="photo-notice" class="muted"></p><div id="attachments" class="photo-grid"></div></section>
+    <section><h3>Essential unknowns &amp; recommended follow-up</h3><ul id="follow-up"></ul></section>
+    <p class="review-note">Only structured job details are shown here. Nothing has been quoted, accepted, priced or sent to another person.</p>
+    <div class="actions"><button type="button" id="review" class="primary">Mark as reviewed</button><button type="button" id="new-enquiry">New customer enquiry</button></div><p id="reviewed" role="status" hidden>Reviewed in this tab. Confirm the job and any safety concerns with the customer.</p>
+  </article>
+  <footer>Same-tab prototype handoff · No job database or external delivery · No photo analysis</footer>
+</main></body></html>

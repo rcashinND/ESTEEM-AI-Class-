@@ -38,7 +38,16 @@ export function analyseRules(message, base) {
   const materials = extractMaterials(text);
   // Classify clauses independently. Buying a tap is not a request to replace it.
   // Skip negated/conditional/completed work, rather than spreading its keywords.
-  const clauses = sentences(text).flatMap(s => s.split(/\b(?:and|but|however|although)\b/i));
+  const clauses = sentences(text).flatMap(s => s.split(/\b(?:and|but|however|although)\b/i)).map(clause => {
+    // Requested future work is not the same as completed work: "need a fence
+    // repaired" is supported; "the fence was already repaired" stays excluded.
+    if (/\b(?:need|needs|want|requires?|please|would like)\b/i.test(clause)) {
+      return clause
+        .replace(/\b(doors?|hinges?|shel(?:f|ves)|fences?)\s+(?:to be\s+)?(?:repaired|fixed)\b/gi,'repair $1')
+        .replace(/\b(doors?|hinges?|shel(?:f|ves)|fences?)\s+(?:needs?|requires?)\s+(?:repairing|fixing|repair)\b/gi,'repair $1');
+    }
+    return clause;
+  });
   const work = clauses.filter(clause => {
     const tested = clause.replace(/\b(?:not urgent|no rush|not working)\b/gi, '');
     return !negative.test(tested) && !/\b(?:if|unless|maybe|perhaps|already|fixed|repaired|cancel|ignore|pretend)\b/i.test(tested);
@@ -50,7 +59,14 @@ export function analyseRules(message, base) {
   const electricalCaution = clauses.some(electricalSymptomIn);
   const water = work.some(c => /\b(?:damp|water damage|leak(?:ing)?)\b/i.test(c));
   const tapReplacement = work.some(c => /\b(?:replace|change|swap|install)\b/i.test(c) && /\b(?:taps?|faucets?)\b/i.test(c));
-  const maintenance = work.some(c => /\b(?:repair|fix)\b/i.test(c) && /\b(?:doors?|hinges?|shel(?:f|ves)|fences?)\b/i.test(c));
+  const maintenanceIn = c => /\b(?:repair|fix)\b/i.test(c) && /\b(?:doors?|hinges?|shel(?:f|ves)|fences?)\b/i.test(c);
+  const maintenance = work.some(maintenanceIn);
+  // Keep bounded affected-item names from supported, non-negated work clauses.
+  // Do not copy the raw paragraph or infer a cause from these reported items.
+  const namedItems = (predicate, pattern) => [...new Set(work.filter(predicate)
+    .flatMap(clause=>[...clause.matchAll(pattern)].map(match=>match[0].toLowerCase())))].join(', ');
+  const repairItems = namedItems(maintenanceIn,/\b(?:doors?|hinges?|shel(?:f|ves)|fences?)\b/gi);
+  const electricalItems = namedItems(electricalSymptomIn,/\b(?:faulty\s+)?(?:sockets?|outlets?|wiring|lights?)\b/gi);
   const safe = 'Possible electrical concern: do not touch or use affected fittings, or approach them to take a photo. Seek qualified assessment; this prototype cannot assess safety or urgency.';
   const materialsQuestion = materials.state === 'Not provided' ? [] : ['Confirm materials purchase, current availability and compatibility directly with the customer.'];
   if (/<[^>]*>/.test(text) || /\b(?:ignore|pretend)\b/i.test(text) || !(tapReplacement || electricalSymptom || maintenance || plumbing)) {
@@ -79,6 +95,8 @@ export function analyseRules(message, base) {
   const job = jobs.join('; ');
   const details = [
     ...(tapReplacement ? ['The message requests tap / faucet replacement.'] : []),
+    ...(maintenance && repairItems ? [`Customer requests repair of: ${repairItems}.`] : []),
+    ...(electricalSymptom && electricalItems ? [`Customer reports electrical symptoms affecting: ${electricalItems}.`] : []),
     ...(electricalSymptom ? ['Electrical symptoms are reported; their cause and any connection with water remain unconfirmed.'] : []),
     ...(maintenance ? ['Repair wording suggests carpentry or general maintenance assessment.'] : []),
     ...materials.details

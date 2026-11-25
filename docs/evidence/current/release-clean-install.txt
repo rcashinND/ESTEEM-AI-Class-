@@ -1,0 +1,206 @@
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm. See `npm help npmrc` for supported config options.
+
+> trawd@1.0.0 verify:clean
+> node tests/verify-clean.mjs
+
+Clean directory: copied only distributable source; fresh HOME, allowlisted environment, no node_modules or app secrets.
+$ npm install
+
+up to date, audited 1 package in 193ms
+
+found 0 vulnerabilities
+
+$ npm test
+
+> trawd@1.0.0 test
+> node --test tests/*.test.mjs
+
+✔ Typical enquiry preserves supplied facts without inferring urgency (2.216645ms)
+✔ Ambiguous enquiry retains multiple possible trades and unknown cause (0.395138ms)
+✔ Empty, short and excessive messages rejected (0.363761ms)
+✔ Vague enquiry does not invent a bathroom renovation (0.188425ms)
+✔ Changed location is extracted rather than inheriting South Bend (4.20889ms)
+✔ Adversarial text cannot inherit a prepared answer (0.993243ms)
+✔ Changed weekday is accurate in fields and summary (0.756785ms)
+✔ Punctuation and alternate faucet wording stay bounded (0.357381ms)
+✔ Electrical symptoms with damp retain caution without diagnosis (0.371653ms)
+✔ Maintenance is tentative and unrelated input is manual (0.869456ms)
+✔ Negation and multiple schedules are never silently resolved (3.301236ms)
+✔ Repeat analysis returns independent details and unknowns (0.298262ms)
+✔ work: native change-only commit saves state, without input dependency or duplicate commits (1.377084ms)
+✔ timing: native change-only commit saves state, without input dependency or duplicate commits (0.219452ms)
+✔ urgency: native change-only commit saves state, without input dependency or duplicate commits (0.174243ms)
+✔ safety: native change-only commit saves state, without input dependency or duplicate commits (0.161765ms)
+✔ Text clarifications still update immediately on input (0.156076ms)
+✔ Already-enabled select is not mutated and retains its selected value (0.140242ms)
+✔ Only inapplicable controls are cleared, and disabled answers are excluded (1.168229ms)
+✔ Hidden controls ignore artificial change events and cleanup removes listeners (0.835915ms)
+✔ Reset to default followed by selecting the same previous value commits again (0.207154ms)
+✔ Work option "" propagates factual job/trade to the brief (2.613015ms)
+✔ Work option "tap" propagates factual job/trade to the brief (0.800692ms)
+✔ Work option "plumbing" propagates factual job/trade to the brief (0.226974ms)
+✔ Work option "electrical" propagates factual job/trade to the brief (0.201225ms)
+✔ Work option "maintenance" propagates factual job/trade to the brief (0.143758ms)
+✔ Work option "other" propagates factual job/trade to the brief (0.141514ms)
+✔ Timing option "" propagates without changing other answers (0.269919ms)
+✔ Timing option "flexible" propagates without changing other answers (0.200683ms)
+✔ Timing option "soon" propagates without changing other answers (0.198961ms)
+✔ Timing option "week" propagates without changing other answers (0.14502ms)
+✔ Timing option "custom" propagates without changing other answers (0.289108ms)
+✔ Urgency option "" propagates the actual customer choice (0.273414ms)
+✔ Urgency option "routine" propagates the actual customer choice (0.227675ms)
+✔ Urgency option "soon" propagates the actual customer choice (0.150548ms)
+✔ Urgency option "urgent" propagates the actual customer choice (1.770129ms)
+✔ Safety option "" propagates without invented hazard causes (0.648592ms)
+✔ Safety option "none" propagates without invented hazard causes (0.259673ms)
+✔ Safety option "electrical" propagates without invented hazard causes (0.235637ms)
+✔ Safety option "water" propagates without invented hazard causes (0.173333ms)
+✔ Safety option "other" propagates without invented hazard causes (0.140884ms)
+✔ Dependent fields clear only on becoming inapplicable; unrelated answers survive (0.265402ms)
+✔ Nondefault committed answers survive the actual structured handoff (1.198494ms)
+✔ Custom timing needs actionable detail; unanswered/other/optional answers are safe (0.23093ms)
+✔ Materials never reverse negative/uncertain wording: I haven't bought the replacement tap. (12.720757ms)
+✔ Materials never reverse negative/uncertain wording: I haven’t bought the replacement tap. (2.031755ms)
+✔ Materials never reverse negative/uncertain wording: I have not bought the replacement tap. (0.174053ms)
+✔ Materials never reverse negative/uncertain wording: I have not yet bought the replacement tap. (0.150458ms)
+✔ Materials never reverse negative/uncertain wording: I have not purchased the replacement tap. (0.214394ms)
+✔ Materials never reverse negative/uncertain wording: Not bought the replacement tap yet. (0.166742ms)
+✔ Materials never reverse negative/uncertain wording: I don't have the replacement tap. (0.234936ms)
+✔ Materials never reverse negative/uncertain wording: I do not have a replacement tap. (0.18484ms)
+✔ Materials never reverse negative/uncertain wording: I have not yet purchased the replacement tap. (0.232201ms)
+✔ Materials never reverse negative/uncertain wording: Replacement tap not yet purchased. (0.213573ms)
+✔ Materials never reverse negative/uncertain wording: We haven't purchased a replacement faucet. (0.124669ms)
+✔ Materials never reverse negative/uncertain wording: I never bought the replacement tap. (0.096707ms)
+✔ Materials never reverse negative/uncertain wording: I am without a replacement tap. (0.150327ms)
+✔ Materials never reverse negative/uncertain wording: I have no replacement tap available. (0.092921ms)
+✔ Materials never reverse negative/uncertain wording: The replacement tap is unavailable. (0.071779ms)
+✔ Materials never reverse negative/uncertain wording: I can't confirm whether I bought the replacement tap. (0.07281ms)
+✔ Contrasting, qualified or attributed materials remain uncertain: I bought the replacement tap but I don't have it. (0.261325ms)
+✔ Contrasting, qualified or attributed materials remain uncertain: I haven't bought the tap, but I have bought the replacement tap. (0.095644ms)
+✔ Contrasting, qualified or attributed materials remain uncertain: I have bought the replacement tap. Actually, I have not bought it. (0.069796ms)
+✔ Contrasting, qualified or attributed materials remain uncertain: I have bought the replacement tap. It is not available. (0.081373ms)
+✔ Contrasting, qualified or attributed materials remain uncertain: I have bought the replacement tap. I returned it. (1.274959ms)
+✔ Contrasting, qualified or attributed materials remain uncertain: I have bought the replacement tap. It has not arrived. (0.133943ms)
+✔ Contrasting, qualified or attributed materials remain uncertain: I may have bought the replacement tap. (0.239803ms)
+✔ Contrasting, qualified or attributed materials remain uncertain: If I have bought the replacement tap, can you fit it? (0.088654ms)
+✔ Contrasting, qualified or attributed materials remain uncertain: Did I buy the replacement tap? (0.112851ms)
+✔ Contrasting, qualified or attributed materials remain uncertain: I have bought the replacement tap for another property. (0.122005ms)
+✔ Contrasting, qualified or attributed materials remain uncertain: The plumber said "I have bought the replacement tap". (0.091859ms)
+✔ Contrasting, qualified or attributed materials remain uncertain: I have bought the replacement tap? I am unsure. (0.089906ms)
+✔ Contrasting, qualified or attributed materials remain uncertain: I have bought the replacement tap, or perhaps I only ordered it. (0.267485ms)
+✔ Contrasting, qualified or attributed materials remain uncertain: I have bought the replacement tap. That was a lie. (0.307746ms)
+✔ Contrasting, qualified or attributed materials remain uncertain: I have bought the replacement tap. I sold it. (0.306864ms)
+✔ Contrasting, qualified or attributed materials remain uncertain: I have bought the replacement tap. The materials are unavailable. (0.214955ms)
+✔ Contrasting, qualified or attributed materials remain uncertain: I have bought the replacement tap. The replacement faucet might be unavailable. (0.494017ms)
+✔ Unqualified first-person purchase is retained: I have bought the replacement tap. (0.677415ms)
+✔ Unqualified first-person purchase is retained: I bought a replacement faucet. (0.41002ms)
+✔ Unqualified first-person purchase is retained: We have purchased the replacement tap. (0.208856ms)
+✔ Unqualified first-person purchase is retained: I’ve already bought the replacement tap. (0.2379ms)
+✔ Exact audited negative purchase never becomes purchased (0.821764ms)
+✔ Overlapping trades accumulate with electrical caution: Please repair the fence and assess a faulty socket in Dublin tomorrow. (1.300929ms)
+✔ Overlapping trades accumulate with electrical caution: Please assess a faulty socket and repair the fence in Dublin tomorrow. (0.354186ms)
+✔ Overlapping trades accumulate with electrical caution: Please replace the tap and repair the fence and assess a faulty socket in Dublin tomorrow. (0.350331ms)
+✔ Overlapping trades accumulate with electrical caution: Please fix the door. The outlet is sparking in Dublin tomorrow. (1.163952ms)
+✔ Independent plumbing and maintenance requests retain both suggestions (0.186312ms)
+✔ Negated work is not classified from keywords (0.268386ms)
+✔ No plumbing is inferred solely from buying a tap during a fence repair (0.234635ms)
+✔ Wednesday preserves the specific plumbing follow-up questions (0.217439ms)
+✔ Explicit variation retains Dublin and Friday (0.114904ms)
+✔ Explicit variation retains South Bend and Monday (0.063757ms)
+✔ Explicit variation retains New York and Thursday (0.056315ms)
+✔ Conflicting dates and locations are not silently selected (0.206362ms)
+✔ Unsupported vague request invents no trade or purchased materials (0.14566ms)
+✔ Invalid input types and whitespace produce useful validation (0.401368ms)
+✔ Electrical caution survives uncertain purchase wording (0.159691ms)
+✔ Multiple positive and negative purchase clauses are order independent (0.346544ms)
+✔ Negating one electrical clause cannot invent a water-related cause (0.166823ms)
+✔ HTTP assets and private-path protection from an ephemeral server (73.804959ms)
+✔ Customer and review routes are distinct pages, including direct review empty state (19.72981ms)
+✔ Active visit answer survives description edit  today (18.953505ms)
+✔ Active visit answer survives description edit . The issue started today. (1.878423ms)
+✔ Active visit answer survives description edit . It began on Tuesday. (0.642172ms)
+✔ Active visit answer survives description edit . I noticed the problem this Wednesday. (0.763496ms)
+✔ Explicit visit preference survives an onset date on a detailed job (1.01745ms)
+✔ Timing selection changes, default, validation and reset remain authoritative (0.633149ms)
+✔ Unanswered clear plumbing date remains Tuesday (0.797287ms)
+✔ Unanswered clear plumbing date remains Wednesday (1.468252ms)
+✔ Concise brief names supported affected items: Please repair the fence and assess a faulty socket in Dublin tomorrow (0.760661ms)
+✔ Concise brief names supported affected items: Please assess a faulty socket and repair the fence in Dublin tomorrow. (0.377141ms)
+✔ Concise brief names supported affected items: I need a fence repaired and a faulty socket assessed in Dublin tomorrow. (0.212612ms)
+✔ Do not resurrect excluded work item: Do not repair the fence. (0.215507ms)
+✔ Do not resurrect excluded work item: The fence was already repaired. (0.136486ms)
+✔ Explicit materials negation survives corrected visit timing: I haven't bought the replacement tap (0.315217ms)
+✔ Explicit materials negation survives corrected visit timing: I have not bought the replacement tap (0.192451ms)
+✔ Explicit materials negation survives corrected visit timing: I don't have the replacement tap (0.237189ms)
+✔ Explicit materials negation survives corrected visit timing: The replacement tap is not yet purchased (0.137067ms)
+✔ Sparse/unsupported detection before submit: I need someone to help with my house (6.161685ms)
+✔ Actual answers make sparse input useful: I need someone to help with my house (8.093089ms)
+✔ Sparse/unsupported detection before submit: something is broken in my kitchen (0.27125ms)
+✔ Actual answers make sparse input useful: something is broken in my kitchen (0.956408ms)
+✔ Sparse/unsupported detection before submit: help (0.260354ms)
+✔ Actual answers make sparse input useful: help (0.501609ms)
+✔ Sparse/unsupported detection before submit: Can somebody have a look at this? (0.340976ms)
+✔ Actual answers make sparse input useful: Can somebody have a look at this? (0.349509ms)
+✔ Detailed plumbing asks only missing urgency and safety (1.789819ms)
+✔ Prepared clear brief retains facts and useful follow-up without original paragraph (0.791998ms)
+✔ Kitchen alone cannot imply plumbing, electrical diagnosis or purchased materials (0.364962ms)
+✔ Uncertain skipped answers remain honest and request essential clarification (0.327295ms)
+✔ Unknown other work preserves the actual short scope without inventing trade (0.352013ms)
+✔ Explicit safety clarification preserves warning without diagnosis (1.171703ms)
+✔ Electrical safety answer adds electrician without losing a known plumbing job (2.335675ms)
+✔ Supported electrical symptoms in an other-concern answer retain caution (0.40982ms)
+✔ A conflicting materials clarification cannot retain a prepared positive purchase detail (0.638617ms)
+✔ Hidden conditional extras are never passed through (0.486116ms)
+✔ Known electrical caution cannot be hidden by a stale no-concern answer (0.582712ms)
+✔ Fence and faulty socket retain both relevant trades and safety (0.773661ms)
+✔ Requested repair participles retain maintenance alongside electrical work (0.750196ms)
+✔ Already completed maintenance does not become a new repair request (0.307786ms)
+✔ Two-stage brief retains materials negation: I haven't bought the replacement tap. (0.570223ms)
+✔ Two-stage brief retains materials negation: I have not purchased the replacement tap. (0.345934ms)
+✔ Two-stage brief retains materials negation: I don't have the replacement tap. (0.379264ms)
+✔ Two-stage brief retains materials negation: Not yet purchased. (0.233513ms)
+✔ Negated clarification never turns materials into a positive (0.648291ms)
+✔ Conflicting work selection cannot reverse a negative instruction (0.247154ms)
+✔ A negated clarification cannot be reversed by its dropdown selection (0.405333ms)
+✔ Hidden old answers cannot override the latest clear description (0.77312ms)
+✔ Blank descriptions cannot be submitted even with completed answers (1.158904ms)
+✔ Photos are optional and never change analysis or create vision claims (0.940704ms)
+✔ Handoff allowlist removes raw paragraph, questionnaire transcript and hidden properties (1.434812ms)
+✔ Latest submission replaces old brief, clear invalidates, direct access is empty (0.268637ms)
+✔ Malformed, expired and future handoffs cannot resurrect stale data (0.374277ms)
+✔ Storage failures are explicit rather than pretending submission succeeded (0.27061ms)
+✔ Failed replacement submission cannot retain an older brief (0.514578ms)
+✔ Photo validation permits supported types and rejects size/type/count violations (0.351922ms)
+✔ Signature validation supports empty-MIME picker photos without trusting filename (1.641204ms)
+✔ JPEG and WebP signatures are recognised, empty/unsupported bytes are not (0.094984ms)
+✔ Handoff photos are separate, stripped of source filename and never arbitrary URLs (0.333795ms)
+✔ Photo removal leaves no image in the submitted handoff (0.11863ms)
+✔ Review page contains no original-input or questionnaire UI and uses safe text rendering (0.458715ms)
+✔ Each supported work choice has a valid option in the customer form (0.225041ms)
+ℹ tests 162
+ℹ suites 0
+ℹ pass 162
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 195.639054
+
+$ PORT=0 npm start
+> trawd@1.0.0 start
+> node server.mjs
+
+Trawd revision 2026-11-19 running on port 40113.
+GET / -> 200
+GET /customer -> 200
+GET /review -> 200
+GET /app.js -> 200
+GET /review.js -> 200
+GET /analysis.mjs -> 200
+GET /rules.mjs -> 200
+GET /workflow.mjs -> 200
+GET /handoff.mjs -> 200
+GET /photos.mjs -> 200
+GET /form-controls.mjs -> 200
+GET /style.css -> 200
+PASS: fresh copy installation, tests, npm start, HTML and all module/style assets.
