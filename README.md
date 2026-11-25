@@ -10,18 +10,7 @@ Open the [public customer enquiry](https://trade-lead-ai.replit.app/customer), t
 
 The browser runs prepared examples and limited, deterministic rules. The intake and review screens are distinct. Photos can be attached for human inspection. The prototype does not perform live language or image inference, diagnose faults, quote, send or accept jobs. The same-tab handoff expires after an hour.
 
-## Assignment components
 
-- [Revision report, risk response and priorities](docs/revision-report.md)
-- [Response to both anonymous peer reviews and instructor feedback](docs/feedback-response.md)
-- [Evaluation evidence, before/after, logs and screenshots](docs/testing-evidence.md)
-- [Draft AI-use disclosure](docs/ai-use-disclosure.md)
-- [Demo script and shot list](docs/demo-script.md)
-- [Submission checklist](docs/submission-checklist.md)
-
-## Demo Video
-
-[Watch the 2:10 narrated demo on Google Drive](https://drive.google.com/file/d/1FwMdab1mJWTQyCu7STGQ8eTq18eTty9h/view). The video records the running prototype and uses synthetic narration. See the [shot list and script](docs/demo-script.md).
 
 ## Install and test
 
